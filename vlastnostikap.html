@@ -1,54 +1,166 @@
-﻿<html>
+<html lang="sk">
 <head>
-  <style>
-    table { border-collapse: collapse; }
-    td    { border: 3px solid black; }
-  </style>
-</head>
-<body bgcolor="cornflowerblue" link="black" vlink="black">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vlastnosti kvapalín a plynov</title>
+<style>
+  @keyframes bgPulse {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+  }
 
-<table border="3" align="right" bordercolor="black" rules="all" cellpadding="10">
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #1a1a1a, #2d2d2d, #1f1f2f, #2d2d2d);
+    background-size: 400% 400%;
+    animation: bgPulse 15s ease infinite;
+    color: #e0e0e0;
+    min-height: 100vh;
+  }
+
+  table {
+    border-collapse: collapse;
+    margin: 10px auto;
+  }
+
+  td {
+    border: none;
+    padding: 10px 15px;
+    background: rgba(60, 60, 80, 0.3);
+    border-radius: 10px;
+    transition: background 0.3s;
+  }
+
+  td:hover {
+    background: rgba(120, 120, 160, 0.5);
+  }
+
+  a {
+    color: #00e0d1;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  a:hover {
+    color: #a77bff;
+  }
+
+  h1, h2 {
+    text-align: center;
+    color: #d0d0ff;
+  }
+
+  .chapters {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+
+  .chapter-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .chapter-list li {
+    background: rgba(40, 40, 60, 0.8);
+    margin: 10px 0;
+    border-radius: 12px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .chapter-list li:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 12px #00e0d1;
+  }
+
+  .chapter-list a {
+    display: block;
+    padding: 15px 20px;
+    color: #00e0d1;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+
+  .chapter-list a:hover {
+    color: #a77bff;
+  }
+
+  .extra-links {
+    text-align: center;
+    margin: 40px 0;
+  }
+
+  .extra-links a {
+    display: inline-block;
+    background: rgba(60, 60, 80, 0.8);
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 8px;
+    transition: background 0.3s;
+  }
+
+  .extra-links a:hover {
+    background: rgba(120, 120, 160, 0.5);
+  }
+
+  @media (max-width: 600px) {
+    td {
+      display: block;
+      margin-bottom: 8px;
+    }
+    table {
+      width: 100%;
+      text-align: center;
+    }
+    .chapter-list a {
+      font-size: 0.95rem;
+      padding: 12px 15px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<table align="center">
   <tr>
-    <td> <a href="index.html"> Hlavná stránka </a> </td>
-    <td> <a href="silaapohyb.html"> Sila a Pohyb </a> </td>
-    <td> <a href="periodickedeje.html"> Periodické deje </a> </td>
-    <td> <a href="elektrina.html"> Elektrina </a> </td>
-    <td> <a href="magnetizmus.html"> Magnetizmus </a> </td>
+    <td><a href="index.html">Hlavná stránka</a></td>
+    <td><a href="silaapohyb.html">Sila a Pohyb</a></td>
+    <td><a href="periodickedeje.html">Periodické deje</a></td>
+    <td><a href="elektrina.html">Elektrina</a></td>
+    <td><a href="magnetizmus.html">Magnetizmus</a></td>
   </tr>
 </table>
 
-<h1> Vlastnosti kvapalín a plynov :)</h1>
-<br><br>
-<h2> Kapitoly (pdf)</h2>
-<h1>ak sa toto zobrazi tak to funguje</h1>
-<font size="4">
-<ol type="1">
- <li> <a href="vlastnostikap_priklady/1.1_TEKUTINY.pdf" target="blank"> Tekutiny  </a> </li>
- <li> <a href="vlastnostikap_priklady/1.2_TLAK._VONKAJSIA_TLAKOVA_SILA..pdf" target="blank"> Tlak, vonkajšia tlaková sila  </a> </li>
- <li> <a href="vlastnostikap_priklady/1.3_HYDROSTATICKA_TLAKOVA_SILA.pdf" target="blank"> Hydrostatická tlaková sila  </a> </li>
- <li> <a href="vlastnostikap_priklady/1.4_TLAK_VZDUCHU_ZAPRICINENY_VZTLAKOVOU_SILOU.pdf" target="blank"> Tlak vzduchu zapríčinený tiažovou silou  </a> </li>
- <li> <a href="vlastnostikap_priklady/1.5_1.6_HYDROSTATICKA_VZTLAKOVA_SILA_A_ARCHIMEDOV_ZAKON.pdf" target="blank"> Hydrostatická vztlaková sila a Archimedov zákon </a> </li>
- <li> <a href="vlastnostikap_priklady/1.7_PRUDENIE_TEKUTIN.pdf" target="blank"> Prúdenie tekutín  </a> </li>
- <li> <a href="vlastnostikap_priklady/1.8_ENERGIA_PRUDENIA_KVAPALINY.pdf" target="blank"> Energia prúdiacej tekutiny  </a> </li>
- <li> <a href="vlastnostikap_priklady/1.9_APLIKACIE_BERNOULLIHO_ROVNICE.pdf" target="blank"> Aplikácie Bernoulliho rovnice  </a> </li>
- <li> <a href="vlastnostikap_priklady/2.2_MNOZSTVO.LATKY.A.LATKOVE.MNOZSTVO.pdf" target="blank"> Množstvo látky a látkové množstvo  </a> </li>
- <li> <a href="vlastnostikap_priklady/2.3_ZMENA_VNUTORNEJ_ENERGIE,_TEPLO.pdf" target="blank"> Zmena vnútornej energie. Teplo  </a> </li>
- <li> <a href="vlastnostikap_priklady/2.4_TOPENIE_ATUHNUTIE.pdf" target="blank"> Topenie a tuhnutie  </a> </li>
- <li> <a href="vlastnostikap_priklady/2.5_VYPAROVANIE_A_KONDENZACIA.pdf" target="blank"> Vyparovanie a kondenzácia  </a> </li>
- <li> <a href="vlastnostikap_priklady/2.6_IDEALNY_PLYN_A_JEHO_TLAK.pdf" target="blank"> Ideálny plyn a jeho tlak  </a> </li>
- <li> <a href="vlastnostikap_priklady/2.7_TEPLOTA_A_TLAK_IDEALNEHO_PLYNU.pdf" target="blank"> Teplota a tlak ideálneho plynu  </a> </li>
- <li> <a href="vlastnostikap_priklady/2.8_ABSOLUTNA_NULA.pdf" target="blank"> Absolútna nula  </a> </li>
-</ol>
-<br><br>
-<a href="velke_word_dokumenty/vlastnostikap_celkovo.docx" target="blank"> Všetky kapitoly (Word) </a>
+<h1>Vlastnosti kvapalín a plynov :)</h1>
+<h2>Kapitoly (PDF)</h2>
 
-<br><br>
-<img src="nic.gif" height="1" width="85%">
-<a href="https://www.skola.sk/s-prispevkom-zo-sr/146484-ucebnica-fyziky-pre-gymnazia-a-sos-vlastnosti-kvapalin-a-plynov.html" target="blank"> Objednajte si knihu </a>
+<div class="chapters">
+  <ol class="chapter-list">
+    <li><a href="vlastnostikap_priklady/1.1_TEKUTINY.pdf" target="_blank">Tekutiny</a></li>
+    <li><a href="vlastnostikap_priklady/1.2_TLAK._VONKAJSIA_TLAKOVA_SILA..pdf" target="_blank">Tlak, vonkajšia tlaková sila</a></li>
+    <li><a href="vlastnostikap_priklady/1.3_HYDROSTATICKA_TLAKOVA_SILA.pdf" target="_blank">Hydrostatická tlaková sila</a></li>
+    <li><a href="vlastnostikap_priklady/1.4_TLAK_VZDUCHU_ZAPRICINENY_VZTLAKOVOU_SILOU.pdf" target="_blank">Tlak vzduchu zapríčinený tiažovou silou</a></li>
+    <li><a href="vlastnostikap_priklady/1.5_1.6_HYDROSTATICKA_VZTLAKOVA_SILA_A_ARCHIMEDOV_ZAKON.pdf" target="_blank">Hydrostatická vztlaková sila a Archimedov zákon</a></li>
+    <li><a href="vlastnostikap_priklady/1.7_PRUDENIE_TEKUTIN.pdf" target="_blank">Prúdenie tekutín</a></li>
+    <li><a href="vlastnostikap_priklady/1.8_ENERGIA_PRUDENIA_KVAPALINY.pdf" target="_blank">Energia prúdiacej tekutiny</a></li>
+    <li><a href="vlastnostikap_priklady/1.9_APLIKACIE_BERNOULLIHO_ROVNICE.pdf" target="_blank">Aplikácie Bernoulliho rovnice</a></li>
+    <li><a href="vlastnostikap_priklady/2.2_MNOZSTVO.LATKY.A.LATKOVE.MNOZSTVO.pdf" target="_blank">Množstvo látky a látkové množstvo</a></li>
+    <li><a href="vlastnostikap_priklady/2.3_ZMENA_VNUTORNEJ_ENERGIE,_TEPLO.pdf" target="_blank">Zmena vnútornej energie. Teplo</a></li>
+    <li><a href="vlastnostikap_priklady/2.4_TOPENIE_ATUHNUTIE.pdf" target="_blank">Topenie a tuhnutie</a></li>
+    <li><a href="vlastnostikap_priklady/2.5_VYPAROVANIE_A_KONDENZACIA.pdf" target="_blank">Vyparovanie a kondenzácia</a></li>
+    <li><a href="vlastnostikap_priklady/2.6_IDEALNY_PLYN_A_JEHO_TLAK.pdf" target="_blank">Ideálny plyn a jeho tlak</a></li>
+    <li><a href="vlastnostikap_priklady/2.7_TEPLOTA_A_TLAK_IDEALNEHO_PLYNU.pdf" target="_blank">Teplota a tlak ideálneho plynu</a></li>
+    <li><a href="vlastnostikap_priklady/2.8_ABSOLUTNA_NULA.pdf" target="_blank">Absolútna nula</a></li>
+  </ol>
+</div>
 
-
+<div class="extra-links">
+  <a href="velke_word_dokumenty/vlastnostikap_celkovo.docx" target="_blank">📘 Všetky kapitoly (Word)</a>
+  <a href="https://www.skola.sk/s-prispevkom-zo-sr/146484-ucebnica-fyziky-pre-gymnazia-a-sos-vlastnosti-kvapalin-a-plynov.html" target="_blank">📚 Objednajte si knihu</a>
+</div>
 
 </body>
-
 </html>
 
