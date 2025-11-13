@@ -1,58 +1,172 @@
-﻿<html>
+<!DOCTYPE html>
+<html lang="sk">
 <head>
-  <style>
-    table { border-collapse: collapse; }
-    td    { border: 3px solid black; }
-  </style>
-</head>
-<body bgcolor="cornflowerblue" link="black" vlink="black">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sila a pohyb</title>
+<style>
+  @keyframes bgPulse {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+  }
 
-<table border="3" align="right" bordercolor="black" rules="all" cellpadding="10">
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #1a1a1a, #2d2d2d, #1f1f2f, #2d2d2d);
+    background-size: 400% 400%;
+    animation: bgPulse 15s ease infinite;
+    color: #e0e0e0;
+    min-height: 100vh;
+  }
+
+  table {
+    border-collapse: collapse;
+    margin: 10px auto;
+  }
+
+  td {
+    border: none;
+    padding: 10px 15px;
+    background: rgba(60, 60, 80, 0.3);
+    border-radius: 10px;
+    transition: background 0.3s;
+  }
+
+  td:hover {
+    background: rgba(120, 120, 160, 0.5);
+  }
+
+  a {
+    color: #00e0d1;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  a:hover {
+    color: #a77bff;
+  }
+
+  h1, h2 {
+    text-align: center;
+    color: #d0d0ff;
+  }
+
+  .chapters {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+
+  .chapter-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .chapter-list li {
+    background: rgba(40, 40, 60, 0.8);
+    margin: 10px 0;
+    border-radius: 12px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .chapter-list li:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 12px #00e0d1;
+  }
+
+  .chapter-list a {
+    display: block;
+    padding: 15px 20px;
+    color: #00e0d1;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+
+  .chapter-list a:hover {
+    color: #a77bff;
+  }
+
+  .extra-links {
+    text-align: center;
+    margin: 40px 0;
+  }
+
+  .extra-links a {
+    display: inline-block;
+    background: rgba(60, 60, 80, 0.8);
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 8px;
+    transition: background 0.3s;
+  }
+
+  .extra-links a:hover {
+    background: rgba(120, 120, 160, 0.5);
+  }
+
+  @media (max-width: 600px) {
+    td {
+      display: block;
+      margin-bottom: 8px;
+    }
+    table {
+      width: 100%;
+      text-align: center;
+    }
+    .chapter-list a {
+      font-size: 0.95rem;
+      padding: 12px 15px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<table align="center">
   <tr>
-    <td> <a href="index.html"> Hlavná stránka </a> </td>
-    <td> <a href="vlastnostikap.html"> Vlastnosti kvapalín a plynov </a> </td>
-    <td> <a href="periodickedeje.html"> Periodické deje </a> </td>
-    <td> <a href="elektrina.html"> Elektrina </a> </td>
-    <td> <a href="magnetizmus.html"> Magnetizmus </a> </td>
+    <td><a href="index.html">Hlavná stránka</a></td>
+    <td><a href="vlastnostikap.html">Vlastnosti kvapalín a plynov</a></td>
+    <td><a href="periodickedeje.html">Periodické deje</a></td>
+    <td><a href="elektrina.html">Elektrina</a></td>
+    <td><a href="magnetizmus.html">Magnetizmus</a></td>
   </tr>
 </table>
 
-<h1> Sila a Pohyb </h1>
-<br><br>
-<h2> Kapitoly (pdf)</h2>
-<font size="4">
-<ol type="1">
- <li> <a href="silaapohyb_priklady/1.1_FYZIKALNE_VELICINY_A_ICH_JEDNOTKY.pdf" target="blank"> Fyzikálne veličiny a jej jednotky  </a> </li>
- <li> <a href="silaapohyb_priklady/1.2_SKALARNE_A_VEKTORVE_VELICINY.pdf" target="blank"> Skálarne a vektorové fyzikálne veličiny  </a> </li>
- <li> <a href="silaapohyb_priklady/1.3_SPRACOVANIE_VYSLEDKOV_MERANIA_FYZIKALNYCH_VELICIN.pdf" target="blank"> Spracovanie výsledkov merania fyzikálnych veličín  </a> </li>
- <li> <a href="silaapohyb_priklady/2.1_SILA_A_JEJ_ZNAZORNENIE.pdf" target="blank"> Sila a jej znázornenie  </a> </li>
- <li> <a href="silaapohyb_priklady/2.2_SKLADANIE_SIL.pdf" target="blank"> Skladanie síl  </a> </li>
- <li> <a href="silaapohyb_priklady/2.3_ROZKLAD_SILY_NA_ZLOZKY.pdf" target="blank"> Rozklad sily na zložky  </a> </li>
- <li> <a href="silaapohyb_priklady/2.4_ROVNOMERNY_PRIAMOCIARY_POHYB.pdf" target="blank"> Rovnomerný priamočiary pohyb  </a> </li>
- <li> <a href="silaapohyb_priklady/2.5_ZOTRVACNOST._PRVY_POHYBOVY_ZAKON.pdf" target="blank"> Zotrvačnosť. Prvý pohybový zákon  </a> </li>
- <li> <a href="silaapohyb_priklady/2.6_TRENIE_TRECIA_SILA.pdf" target="blank"> Trenie. Trecia sila  </a> </li>
- <li> <a href="silaapohyb_priklady/2.7_ODPOROVA_SILA.pdf" target="blank"> Odporová sila  </a> </li>
- <li> <a href="silaapohyb_priklady/2.8_ZRYCHLENIE_ROVNOMERNE_ZRYCHLENY_A_SPOMALENY_POHYB.pdf" target="blank"> Zrýchlenie. Rovnomerne zrýchlený pohyb  </a> </li>
- <li> <a href="silaapohyb_priklady/2.9_PRICINA_ZMENY_HYBNOSTI._2_POHYBOVY_ZAKON.pdf" target="blank"> Príčina zmeny hybnosti. Druhý pohybový zákon  </a> </li>
- <li> <a href="silaapohyb_priklady/2.10_VOLNY_PAD.pdf" target="blank"> Voľný pád  </a> </li>
- <li> <a href="silaapohyb_priklady/2.11_PRICINA_ZMENY_SMERU_POHYBU.pdf" target="blank""> Príčina zmeny smeru pohybu  </a> </li>
- <li> <a href="silaapohyb_priklady/2.12._ZAKON_ZACHOVANIAHYBNOSTI.pdf" target="blank"> Zákon zachovania hybnosti  </a> </li>
- <li> <a href="silaapohyb_priklady/2.14_MOMENT_SILY_VZHLADOM_NA_OS_OTACANIA.pdf" target="blank"> Moment sily  </a> </li>
- <li> <a href="silaapohyb_priklady/2.15_MECHANICKA_PRACA.pdf" target="blank"> Mechanická práca  </a> </li>
- <li> <a href="silaapohyb_priklady/2.16_KINETICKA_ENERGIA.pdf" target="blank"> Kinetická energia  </a> </li>
- <li> <a href="silaapohyb_priklady/2.17_POTENCIALNA_ENERGIA.pdf" target="blank"> Potenciálna energia  </a> </li>
- <li> <a href="silaapohyb_priklady/2.18_PREMENY_MECHANICKEJ_ENERGIE.pdf" target="blank"> Premeny mechanickej energie  </a> </li>
- <li> <a href="silaapohyb_priklady/2.19_POTENCIALNA_ENERGIA_PRUZNEHO_TELESA.pdf" target="blank"> Potenciálna energia pružného telesa  </a> </li>
-</ol>
+<h1>Sila a pohyb ⚙️</h1>
+<h2>Kapitoly (PDF)</h2>
 
-<br><br>
-<a href="velke_word_dokumenty/silaapohyb_celkovo.docx" target="blank"> Všetky kapitoly (Word) </a>
+<div class="chapters">
+  <ol class="chapter-list">
+    <li><a href="silaapohyb_priklady/1.1_FYZIKALNE_VELICINY_A_ICH_JEDNOTKY.pdf" target="_blank">Fyzikálne veličiny a jej jednotky</a></li>
+    <li><a href="silaapohyb_priklady/1.2_SKALARNE_A_VEKTORVE_VELICINY.pdf" target="_blank">Skalárne a vektorové fyzikálne veličiny</a></li>
+    <li><a href="silaapohyb_priklady/1.3_SPRACOVANIE_VYSLEDKOV_MERANIA_FYZIKALNYCH_VELICIN.pdf" target="_blank">Spracovanie výsledkov merania fyzikálnych veličín</a></li>
+    <li><a href="silaapohyb_priklady/2.1_SILA_A_JEJ_ZNAZORNENIE.pdf" target="_blank">Sila a jej znázornenie</a></li>
+    <li><a href="silaapohyb_priklady/2.2_SKLADANIE_SIL.pdf" target="_blank">Skladanie síl</a></li>
+    <li><a href="silaapohyb_priklady/2.3_ROZKLAD_SILY_NA_ZLOZKY.pdf" target="_blank">Rozklad sily na zložky</a></li>
+    <li><a href="silaapohyb_priklady/2.4_ROVNOMERNY_PRIAMOCIARY_POHYB.pdf" target="_blank">Rovnomerný priamočiary pohyb</a></li>
+    <li><a href="silaapohyb_priklady/2.5_ZOTRVACNOST._PRVY_POHYBOVY_ZAKON.pdf" target="_blank">Zotrvačnosť. Prvý pohybový zákon</a></li>
+    <li><a href="silaapohyb_priklady/2.6_TRENIE_TRECIA_SILA.pdf" target="_blank">Trenie. Trecia sila</a></li>
+    <li><a href="silaapohyb_priklady/2.7_ODPOROVA_SILA.pdf" target="_blank">Odporová sila</a></li>
+    <li><a href="silaapohyb_priklady/2.8_ZRYCHLENIE_ROVNOMERNE_ZRYCHLENY_A_SPOMALENY_POHYB.pdf" target="_blank">Zrýchlenie. Rovnomerne zrýchlený pohyb</a></li>
+    <li><a href="silaapohyb_priklady/2.9_PRICINA_ZMENY_HYBNOSTI._2_POHYBOVY_ZAKON.pdf" target="_blank">Príčina zmeny hybnosti. Druhý pohybový zákon</a></li>
+    <li><a href="silaapohyb_priklady/2.10_VOLNY_PAD.pdf" target="_blank">Voľný pád</a></li>
+    <li><a href="silaapohyb_priklady/2.11_PRICINA_ZMENY_SMERU_POHYBU.pdf" target="_blank">Príčina zmeny smeru pohybu</a></li>
+    <li><a href="silaapohyb_priklady/2.12._ZAKON_ZACHOVANIAHYBNOSTI.pdf" target="_blank">Zákon zachovania hybnosti</a></li>
+    <li><a href="silaapohyb_priklady/2.14_MOMENT_SILY_VZHLADOM_NA_OS_OTACANIA.pdf" target="_blank">Moment sily</a></li>
+    <li><a href="silaapohyb_priklady/2.15_MECHANICKA_PRACA.pdf" target="_blank">Mechanická práca</a></li>
+    <li><a href="silaapohyb_priklady/2.16_KINETICKA_ENERGIA.pdf" target="_blank">Kinetická energia</a></li>
+    <li><a href="silaapohyb_priklady/2.17_POTENCIALNA_ENERGIA.pdf" target="_blank">Potenciálna energia</a></li>
+    <li><a href="silaapohyb_priklady/2.18_PREMENY_MECHANICKEJ_ENERGIE.pdf" target="_blank">Premeny mechanickej energie</a></li>
+    <li><a href="silaapohyb_priklady/2.19_POTENCIALNA_ENERGIA_PRUZNEHO_TELESA.pdf" target="_blank">Potenciálna energia pružného telesa</a></li>
+  </ol>
+</div>
 
-<br><br>
-<img src="nic.gif" height="1" width="85%">
-<a href="https://www.skola.sk/s-prispevkom-zo-sr/146483-ucebnica-fyziky-pre-gymnazia-a-sos-sila-a-pohyb.html" target="blank"> Objednajte si knihu </a>
-
-
+<div class="extra-links">
+  <a href="velke_word_dokumenty/silaapohyb_celkovo.docx" target="_blank">📘 Všetky kapitoly (Word)</a>
+  <a href="https://www.skola.sk/s-prispevkom-zo-sr/146483-ucebnica-fyziky-pre-gymnazia-a-sos-sila-a-pohyb.html" target="_blank">📚 Objednajte si knihu</a>
+</div>
 
 </body>
 </html>
