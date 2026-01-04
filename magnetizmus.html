@@ -1,135 +1,153 @@
-<!DOCTYPE html>
 <html lang="sk">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Magnetizmus</title>
-
+<title>Elektrina</title>
 <style>
-@keyframes bgPulse {
-  0% { background-position: 0% 0%; }
-  50% { background-position: 100% 100%; }
-  100% { background-position: 0% 0%; }
-}
+  @keyframes bgPulse {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+  }
 
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-background: #e6b57a;
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+ background: #e6b57a;
 background: linear-gradient(90deg,rgba(230, 181, 122, 1) 0%, rgba(209, 130, 10, 1) 100%);
-  animation: bgPulse 15s ease infinite;
-  color: #F2F2F2;
-  min-height: 100vh;
-}
+    animation: bgPulse 15s ease infinite;
+    color: #e0e0e0;
+    min-height: 100vh;
+  }
 
-table {
-  border-collapse: collapse;
-  margin: 10px auto;
-}
 
-td {
-  border: none;
-  padding: 10px 15px;
-  background: #1B1B1F;
-  border-radius: 10px;
-  transition: background 0.3s;
-}
 
-td:hover {
+
+td a:hover {
   background: rgba(120, 120, 160, 0.5);
-}
-
-a {
-  color: #B3B3B3;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-a:hover {
   color: #a77bff;
 }
-
-h1, h2 {
-  text-align: center;
-  color: #0B0B0E;
-}
-
-.chapters {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-.chapter-list {
-  list-style: none;
-  padding: 0;
-}
-
-.chapter-list li {
   
-  background:#1B1B1F;
-  margin: 10px 0;
-  border-radius: 12px;
-  transition: transform 0.2s, box-shadow 0.2s;
+
+  h1, h2 {
+    text-align: center;
+    color: #d0d0ff;
+  }
+
+  .chapters {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+
+  .chapter-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .chapter-list li {
+    background: rgba(40, 40, 60, 0.8);
+    margin: 10px 0;
+    border-radius: 12px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .chapter-list li:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 12px #00e0d1;
+  }
+
+  .chapter-list a {
+    display: block;
+    padding: 15px 20px;
+    color: #00e0d1;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+
+  .chapter-list a:hover {
+    color: #a77bff;
+  }
+
+  .extra-links {
+    text-align: center;
+    margin: 40px 0;
+  }
+
+  .extra-links a {
+    display: inline-block;
+    background: rgba(60, 60, 80, 0.8);
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 8px;
+    transition: background 0.3s;
+  }
+
+  .extra-links a:hover {
+    background: rgba(120, 120, 160, 0.5);
+  }
+
+  @media (max-width: 600px) {
+    td {
+      display: block;
+      margin-bottom: 8px;
+    }
+    table {
+      width: 100%;
+      text-align: center;
+    }
+    .chapter-list a {
+      font-size: 0.95rem;
+      padding: 12px 15px;
+    }
+  }
+  .menu {
+  display: flex;
+  flex-wrap: wrap;        /* ⬅️ zabráni prekrývaniu */
+  justify-content: center;
+  gap: 10px;
+  padding: 15px;
 }
 
-.chapter-list li:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 12px #00e0d1;
+.menu a {
+  padding: 10px 15px;
+  background: rgba(60, 60, 80, 0.3);
+  border-radius: 10px;
+  color: #00e0d1;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+  white-space: nowrap;
 }
 
-.chapter-list a {
-  display: block;
-  padding: 15px 20px;
-  font-size: 1rem;
-}
-
-.extra-links {
-  text-align: center;
-  margin: 40px 0;
-}
-
-.extra-links a {
-  display: inline-block;
-  background: rgba(60, 60, 80, 0.8);
-  padding: 10px 20px;
-  margin: 10px;
-  border-radius: 8px;
-  transition: background 0.3s;
-}
-
-.extra-links a:hover {
+.menu a:hover {
   background: rgba(120, 120, 160, 0.5);
+  color: #a77bff;
+  transform: translateY(-2px);
 }
 
 @media (max-width: 600px) {
-  td {
-    display: block;
-    margin-bottom: 8px;
+  .menu {
+    flex-direction: column;
+    align-items: center;
   }
-  table {
-    width: 100%;
+
+  .menu a {
+    width: 90%;
     text-align: center;
-  }
-  .chapter-list a {
-    font-size: 0.95rem;
-    padding: 12px 15px;
   }
 }
 </style>
 </head>
-
 <body>
 
-<table align="center">
-<tr>
-  <td><a href="index.html">Hlavná stránka</a></td>
-  <td><a href="silaapohyb.html">Sila a Pohyb</a></td>
-  <td><a href="vlastnostikap.html">Vlastnosti kvapalín a plynov</a></td>
-  <td><a href="periodickedeje.html">Periodické deje</a></td>
-  <td><a href="elektrina.html">Elektrina</a></td>
-</tr>
-</table>
+<nav class="menu">
+  <a href="index.html">Hlavná stránka</a>
+  <a href="silaapohyb.html">Sila a Pohyb</a>
+  <a href="periodickedeje.html">Periodické deje</a>
+  <a href="vlastnostikap.html">Vlastnosti kvapalín a plynov</a>
+  <a href="elektrina.html">Elektrina</a>
+</nav>
 
 <h1>Magnetizmus 🧲</h1>
 <h2>Kapitoly (PDF)</h2>
@@ -157,6 +175,7 @@ h1, h2 {
 
 </body>
 </html>
+
 
 
 
