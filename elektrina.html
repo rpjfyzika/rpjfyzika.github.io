@@ -1,158 +1,153 @@
-<!DOCTYPE html>
 <html lang="sk">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Elektrina</title>
-
 <style>
-@keyframes bgPulse {
-  0% { background-position: 0% 0%; }
-  50% { background-position: 100% 100%; }
-  100% { background-position: 0% 0%; }
-}
+  @keyframes bgPulse {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+  }
 
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #141414, #222233, #1a1a2a, #222233);
-  background-size: 400% 400%;
-  animation: bgPulse 15s ease infinite;
-  color: #e0e0e0;
-  min-height: 100vh;
-}
-
-
-  .menu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-}
-
-.menu li {
-  margin: 0 10px;
-  background: rgba(60, 60, 80, 0.35);
-}
-
-.menu li a {
-  display: block;          /* celé pole klikateľné */
-  padding: 10px 15px;
-  text-decoration: none;
-  color: black;
-}
-
-.menu li a:hover {
-  background-color: #ddd;
-}
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #1a1a1a, #2d2d2d, #1f1f2f, #2d2d2d);
+    background-size: 400% 400%;
+    animation: bgPulse 15s ease infinite;
+    color: #e0e0e0;
+    min-height: 100vh;
+  }
 
 
-table {
-  border-collapse: collapse;
-  margin: 10px auto;
-}
 
-td {
-  border: none;
-  padding: 10px 15px;
-  background: rgba(60, 60, 80, 0.35);
-  border-radius: 10px;
-  transition: background 0.3s;
-}
 
-td:hover {
-  background: rgba(120, 120, 160, 0.55);
-}
-
-a {
-  color: #00e0ff;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-a:hover {
+td a:hover {
+  background: rgba(120, 120, 160, 0.5);
   color: #a77bff;
 }
+  
 
-h1, h2 {
-  text-align: center;
-  color: #d0d0ff;
+  h1, h2 {
+    text-align: center;
+    color: #d0d0ff;
+  }
+
+  .chapters {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+
+  .chapter-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .chapter-list li {
+    background: rgba(40, 40, 60, 0.8);
+    margin: 10px 0;
+    border-radius: 12px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .chapter-list li:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 12px #00e0d1;
+  }
+
+  .chapter-list a {
+    display: block;
+    padding: 15px 20px;
+    color: #00e0d1;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+
+  .chapter-list a:hover {
+    color: #a77bff;
+  }
+
+  .extra-links {
+    text-align: center;
+    margin: 40px 0;
+  }
+
+  .extra-links a {
+    display: inline-block;
+    background: rgba(60, 60, 80, 0.8);
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 8px;
+    transition: background 0.3s;
+  }
+
+  .extra-links a:hover {
+    background: rgba(120, 120, 160, 0.5);
+  }
+
+  @media (max-width: 600px) {
+    td {
+      display: block;
+      margin-bottom: 8px;
+    }
+    table {
+      width: 100%;
+      text-align: center;
+    }
+    .chapter-list a {
+      font-size: 0.95rem;
+      padding: 12px 15px;
+    }
+  }
+  .menu {
+  display: flex;
+  flex-wrap: wrap;        /* ⬅️ zabráni prekrývaniu */
+  justify-content: center;
+  gap: 10px;
+  padding: 15px;
 }
 
-.chapters {
-  max-width: 820px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-.chapter-list {
-  list-style: none;
-  padding: 0;
-}
-
-.chapter-list li {
-  background: rgba(35, 35, 55, 0.85);
-  margin: 12px 0;
-  border-radius: 14px;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.chapter-list li:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 14px #00e0ff;
-}
-
-.chapter-list a {
-  display: block;
-  padding: 15px 22px;
-  font-size: 1rem;
-}
-
-.extra-links {
-  text-align: center;
-  margin: 40px 0;
-}
-
-.extra-links a {
-  display: inline-block;
-  background: rgba(60, 60, 80, 0.85);
-  padding: 12px 22px;
-  margin: 10px;
+.menu a {
+  padding: 10px 15px;
+  background: rgba(60, 60, 80, 0.3);
   border-radius: 10px;
-  transition: background 0.3s;
+  color: #00e0d1;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+  white-space: nowrap;
 }
 
-.extra-links a:hover {
-  background: rgba(120, 120, 160, 0.6);
+.menu a:hover {
+  background: rgba(120, 120, 160, 0.5);
+  color: #a77bff;
+  transform: translateY(-2px);
 }
 
 @media (max-width: 600px) {
-  td {
-    display: block;
-    margin-bottom: 8px;
+  .menu {
+    flex-direction: column;
+    align-items: center;
   }
-  table {
-    width: 100%;
+
+  .menu a {
+    width: 90%;
     text-align: center;
-  }
-  .chapter-list a {
-    font-size: 0.95rem;
-    padding: 12px 16px;
   }
 }
 </style>
 </head>
-
 <body>
 
-<ul class="menu", align:center>
-  <li><a href="index.html">Hlavná stránka</a></li>
-  <li><a href="silaapohyb.html">Sila a Pohyb</a></li>
-  <li><a href="vlastnostikap.html">Vlastnosti kvapalín a plynov</a></li>
-  <li><a href="periodickedeje.html">Periodické deje</a></li>
-  <li><a href="magnetizmus.html">Magnetizmus</a></li>
-</ul>
+<nav class="menu">
+  <a href="index.html">Hlavná stránka</a>
+  <a href="silaapohyb.html">Sila a Pohyb</a>
+  <a href="periodickedeje.html">Periodické deje</a>
+  <a href="vlastnostikap.html">Vlastnosti kvapalín a plynov</a>
+  <a href="magnetizmus.html">Magnetizmus</a>
+</nav>
 
 
 <h1>Elektrina ⚡</h1>
@@ -179,5 +174,6 @@ h1, h2 {
 
 </body>
 </html>
+
 
 
