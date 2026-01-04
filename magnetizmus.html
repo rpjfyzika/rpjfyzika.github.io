@@ -1,48 +1,158 @@
-﻿<html>
+<!DOCTYPE html>
+<html lang="sk">
 <head>
-  <style>
-    table { border-collapse: collapse; }
-    td    { border: 3px solid black; }
-  </style>
-</head>
-<body bgcolor="cornflowerblue" link="black" vlink="black">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magnetizmus</title>
 
-<table border="3" align="right" bordercolor="black" rules="all" cellpadding="10">
-  <tr>
-    <td> <a href="index.html"> Hlavná stránka </a> </td>
-    <td> <a href="silaapohyb.html"> Sila a Pohyb </a> </td>
-    <td> <a href="vlastnostikap.html"> Vlastnosti kvapalín a plynov </a> </td>
-    <td> <a href="periodickedeje.html"> Periodické deje </a> </td>
-    <td> <a href="elektrina.html"> Elektrina </a> </td>
-  </tr>
+<style>
+@keyframes bgPulse {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #1a1a1a, #2d2d2d, #1f1f2f, #2d2d2d);
+  background-size: 400% 400%;
+  animation: bgPulse 15s ease infinite;
+  color: #e0e0e0;
+  min-height: 100vh;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 10px auto;
+}
+
+td {
+  border: none;
+  padding: 10px 15px;
+  background: rgba(60, 60, 80, 0.3);
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+td:hover {
+  background: rgba(120, 120, 160, 0.5);
+}
+
+a {
+  color: #00e0d1;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  color: #a77bff;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #d0d0ff;
+}
+
+.chapters {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.chapter-list {
+  list-style: none;
+  padding: 0;
+}
+
+.chapter-list li {
+  background: rgba(40, 40, 60, 0.8);
+  margin: 10px 0;
+  border-radius: 12px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.chapter-list li:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 12px #00e0d1;
+}
+
+.chapter-list a {
+  display: block;
+  padding: 15px 20px;
+  font-size: 1rem;
+}
+
+.extra-links {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.extra-links a {
+  display: inline-block;
+  background: rgba(60, 60, 80, 0.8);
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.extra-links a:hover {
+  background: rgba(120, 120, 160, 0.5);
+}
+
+@media (max-width: 600px) {
+  td {
+    display: block;
+    margin-bottom: 8px;
+  }
+  table {
+    width: 100%;
+    text-align: center;
+  }
+  .chapter-list a {
+    font-size: 0.95rem;
+    padding: 12px 15px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<table align="center">
+<tr>
+  <td><a href="index.html">Hlavná stránka</a></td>
+  <td><a href="silaapohyb.html">Sila a Pohyb</a></td>
+  <td><a href="vlastnostikap.html">Vlastnosti kvapalín a plynov</a></td>
+  <td><a href="periodickedeje.html">Periodické deje</a></td>
+  <td><a href="elektrina.html">Elektrina</a></td>
+</tr>
 </table>
 
-<h1> Magnetizmus </h1>
-<br><br>
-<h2> Kapitoly (pdf)</h2>
-<font size="4">
-<ol type="1">
- <li> <a href="magnetizmus_priklady/1.1_1.2_MAGNETICKE_POLE_PERMANENTNEHO_MAGNETU_A_VODICA_S_PRUDOM.pdf" target="blank"> Magnetické pole permanentného magnetu a vodiča s prúdom  </a> </li>
- <li> <a href="magnetizmus_priklady/1.3_POSOBENIE_MAGNETICKEHO_POLA_NA_VODIC_S_PRUDOM.pdf" target="blank"> Pôsobenie magnetického poľa na vodič s prúdom  </a> </li>
- <li> <a href="magnetizmus_priklady/1.4_VZAJOMNE_POSOBENIE_VODICOV_S_PRUDOM.pdf" target="blank"> Vzájomné pôsobenie vodičom s prúdom  </a> </li>
- <li> <a href="magnetizmus_priklady/1.5_POSOBENIE_MAGNETICKEHO_POLA_NA_CASTICU_S_NABOJOM.pdf" target="blank"> Pôsobenie magnetického poľa na časticu s nábojom  </a> </li>
- <li> <a href="magnetizmus_priklady/2.1_ELEKTROMAGENTICKA_INDUKCIA.pdf" target="blank"> Elektromagnetická indukcia  </a> </li>
- <li> <a href="magnetizmus_priklady/2.2_STRIEDAVE_NAPATIE.pdf" target="blank"> Striedavé napätie  </a> </li>
- <li> <a href="magnetizmus_priklady/2.3_GENERATOR_STRIEDAVEHO_NAPATIA.pdf" target="blank"> Generátor striedavého napätia  </a> </li>
- <li> <a href="magnetizmus_priklady/2.4_VLASTNOSTI_STRIEDAVEHO_PRUDU.pdf" target="blank"> Vlastnosti striedavého prúdu  </a> </li>
- <li> <a href="magnetizmus_priklady/2.5_VYKON_STRIEDAVEHO_PRUDU.pdf" target="blank"> Výkon striedavého prúdu  </a> </li>
- <li> <a href="magnetizmus_priklady/2.6_TRANSFORMATOR.pdf" target="blank"> Transformátor  </a> </li>
- <li> <a href="magnetizmus_priklady/2.7_ELEKTRICKA_ROZVODNA_SIET.pdf" target="blank"> Elektrická rozvodná sieť  </a> </li>
+<h1>Magnetizmus 🧲</h1>
+<h2>Kapitoly (PDF)</h2>
+
+<div class="chapters">
+<ol class="chapter-list">
+  <li><a href="magnetizmus_priklady/1.1_1.2_MAGNETICKE_POLE_PERMANENTNEHO_MAGNETU_A_VODICA_S_PRUDOM.pdf" target="_blank">Magnetické pole permanentného magnetu a vodiča s prúdom</a></li>
+  <li><a href="magnetizmus_priklady/1.3_POSOBENIE_MAGNETICKEHO_POLA_NA_VODIC_S_PRUDOM.pdf" target="_blank">Pôsobenie magnetického poľa na vodič s prúdom</a></li>
+  <li><a href="magnetizmus_priklady/1.4_VZAJOMNE_POSOBENIE_VODICOV_S_PRUDOM.pdf" target="_blank">Vzájomné pôsobenie vodičov s prúdom</a></li>
+  <li><a href="magnetizmus_priklady/1.5_POSOBENIE_MAGNETICKEHO_POLA_NA_CASTICU_S_NABOJOM.pdf" target="_blank">Pôsobenie magnetického poľa na časticu s nábojom</a></li>
+  <li><a href="magnetizmus_priklady/2.1_ELEKTROMAGENTICKA_INDUKCIA.pdf" target="_blank">Elektromagnetická indukcia</a></li>
+  <li><a href="magnetizmus_priklady/2.2_STRIEDAVE_NAPATIE.pdf" target="_blank">Striedavé napätie</a></li>
+  <li><a href="magnetizmus_priklady/2.3_GENERATOR_STRIEDAVEHO_NAPATIA.pdf" target="_blank">Generátor striedavého napätia</a></li>
+  <li><a href="magnetizmus_priklady/2.4_VLASTNOSTI_STRIEDAVEHO_PRUDU.pdf" target="_blank">Vlastnosti striedavého prúdu</a></li>
+  <li><a href="magnetizmus_priklady/2.5_VYKON_STRIEDAVEHO_PRUDU.pdf" target="_blank">Výkon striedavého prúdu</a></li>
+  <li><a href="magnetizmus_priklady/2.6_TRANSFORMATOR.pdf" target="_blank">Transformátor</a></li>
+  <li><a href="magnetizmus_priklady/2.7_ELEKTRICKA_ROZVODNA_SIET.pdf" target="_blank">Elektrická rozvodná sieť</a></li>
 </ol>
+</div>
 
-<br><br>
-<a href="velke_word_dokumenty/magnetizmus_celkovo.docx" target="blank"> Všetky kapitoly (Word) </a>
-
-<br><br>
-<img src="nic.gif" height="1" width="85%">
-<a href="https://www.skola.sk/s-prispevkom-zo-sr/146486-ucebnica-fyziky-pre-gymnazia-a-sos-magnetizmus.html" target="blank"> Objednajte si knihu </a>
-
-
+<div class="extra-links">
+  <a href="velke_word_dokumenty/magnetizmus_celkovo.docx" target="_blank">📘 Všetky kapitoly (Word)</a>
+  <a href="https://www.skola.sk/s-prispevkom-zo-sr/146486-ucebnica-fyziky-pre-gymnazia-a-sos-magnetizmus.html" target="_blank">📚 Objednajte si knihu</a>
+</div>
 
 </body>
 </html>
