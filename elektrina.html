@@ -22,6 +22,31 @@ body {
   min-height: 100vh;
 }
 
+
+  .menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.menu li {
+  margin: 0 10px;
+}
+
+.menu li a {
+  display: block;          /* celé pole klikateľné */
+  padding: 10px 15px;
+  text-decoration: none;
+  color: black;
+}
+
+.menu li a:hover {
+  background-color: #ddd;
+}
+
+
 table {
   border-collapse: collapse;
   margin: 10px auto;
@@ -120,15 +145,14 @@ h1, h2 {
 
 <body>
 
-<table align="center">
-<tr>
-  <td><a href="index.html">Hlavná stránka</a></td>
-  <td><a href="silaapohyb.html">Sila a Pohyb</a></td>
-  <td><a href="vlastnostikap.html">Vlastnosti kvapalín a plynov</a></td>
-  <td><a href="periodickedeje.html">Periodické deje</a></td>
-  <td><a href="magnetizmus.html">Magnetizmus</a></td>
-</tr>
-</table>
+<ul class="menu", align:center>
+  <li><a href="index.html">Hlavná stránka</a></li>
+  <li><a href="silaapohyb.html">Sila a Pohyb</a></li>
+  <li><a href="vlastnostikap.html">Vlastnosti kvapalín a plynov</a></li>
+  <li><a href="periodickedeje.html">Periodické deje</a></li>
+  <li><a href="magnetizmus.html">Magnetizmus</a></li>
+</ul>
+
 
 <h1>Elektrina ⚡</h1>
 <h2>Kapitoly (PDF)</h2>
@@ -154,3 +178,4 @@ h1, h2 {
 
 </body>
 </html>
+
