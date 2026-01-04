@@ -41,7 +41,11 @@ td a {
   font-weight: 600;
   text-decoration: none;
   transition: background 0.3s, transform 0.2s;
-  margin: 0 5px;
+table {
+  border-collapse: separate; /* musí byť separate, aby spacovanie fungovalo */
+  border-spacing: 10px;      /* vzdialenosť medzi bunkami */
+  margin: 10px auto;
+}
 }
 
 td a:hover {
@@ -166,6 +170,7 @@ td a:hover {
 
 </body>
 </html>
+
 
 
 
