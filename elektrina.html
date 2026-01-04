@@ -1,46 +1,156 @@
-﻿<html>
+<!DOCTYPE html>
+<html lang="sk">
 <head>
-  <style>
-    table { border-collapse: collapse; }
-    td    { border: 3px solid black; }
-  </style>
-</head>
-<body bgcolor="cornflowerblue" link="black" vlink="black">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elektrina</title>
 
-<table border="3" align="right" bordercolor="black" rules="all" cellpadding="10">
-  <tr>
-    <td> <a href="index.html"> Hlavná stránka </a> </td>
-    <td> <a href="silaapohyb.html"> Sila a Pohyb </a> </td>
-    <td> <a href="vlastnostikap.html"> Vlastnosti kvapalín a plynov </a> </td>
-    <td> <a href="periodickedeje.html"> Periodické deje </a> </td>
-    <td> <a href="magnetizmus.html"> Magnetizmus </a> </td>
-  </tr>
+<style>
+@keyframes bgPulse {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #141414, #222233, #1a1a2a, #222233);
+  background-size: 400% 400%;
+  animation: bgPulse 15s ease infinite;
+  color: #e0e0e0;
+  min-height: 100vh;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 10px auto;
+}
+
+td {
+  border: none;
+  padding: 10px 15px;
+  background: rgba(60, 60, 80, 0.35);
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+td:hover {
+  background: rgba(120, 120, 160, 0.55);
+}
+
+a {
+  color: #00e0ff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  color: #a77bff;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #d0d0ff;
+}
+
+.chapters {
+  max-width: 820px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.chapter-list {
+  list-style: none;
+  padding: 0;
+}
+
+.chapter-list li {
+  background: rgba(35, 35, 55, 0.85);
+  margin: 12px 0;
+  border-radius: 14px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.chapter-list li:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 14px #00e0ff;
+}
+
+.chapter-list a {
+  display: block;
+  padding: 15px 22px;
+  font-size: 1rem;
+}
+
+.extra-links {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.extra-links a {
+  display: inline-block;
+  background: rgba(60, 60, 80, 0.85);
+  padding: 12px 22px;
+  margin: 10px;
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+.extra-links a:hover {
+  background: rgba(120, 120, 160, 0.6);
+}
+
+@media (max-width: 600px) {
+  td {
+    display: block;
+    margin-bottom: 8px;
+  }
+  table {
+    width: 100%;
+    text-align: center;
+  }
+  .chapter-list a {
+    font-size: 0.95rem;
+    padding: 12px 16px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<table align="center">
+<tr>
+  <td><a href="index.html">Hlavná stránka</a></td>
+  <td><a href="silaapohyb.html">Sila a Pohyb</a></td>
+  <td><a href="vlastnostikap.html">Vlastnosti kvapalín a plynov</a></td>
+  <td><a href="periodickedeje.html">Periodické deje</a></td>
+  <td><a href="magnetizmus.html">Magnetizmus</a></td>
+</tr>
 </table>
 
-<h1> Elektrina </h1>
-<br><br>
-<h2> Kapitoly (pdf)</h2>
-<font size="4">
-<ol type="1">
- <li> <a href="elektrina_priklady/1_ELEKTRICKY_NABOJ.pdf" target="blank"> Elektrický náboj  </a> </li>
- <li> <a href="elektrina_priklady/2_ELEKTRICKY_PRUD.pdf" target="blank"> Elektrický prúd  </a> </li>
- <li> <a href="elektrina_priklady/3_MERANIE_ELEKTRICKEHO_PRUDU_V_OBVODE.pdf" target="blank"> Meranie elektrického prúdu v obvode  </a> </li>
- <li> <a href="elektrina_priklady/4-6_EL.NAPATIE,_EL._ODPOR,_OHMOV_ZAKON_PRE_CAST_ELEKTRICKEHO_OBVODU.pdf" target="blank"> Elektrické napätie a Ohmov zákon pre časť elektrického obvodu a Elektrický odpor </a> </li>
- <li> <a href="elektrina_priklady/7_OHMOV_ZAKON_PRE_UZAVRETY_ELEKTRICKY_OBVOD.pdf" target="blank"> Ohmov zákon pre uzavretý elektrický obvod  </a> </li>
- <li> <a href="elektrina_priklady/8_ZAHRIEVANIE_VODICA_ELEKTRICKYM_PRUDOM.pdf" target="blank"> Zahrievanie vodiča elektrickým prúdom  </a> </li>
- <li> <a href="elektrina_priklady/9_ELEKTRICKY_PRUD_V_KVAPALINACH.pdf" target="blank"> Elektrický prúd v kvapalinách  </a> </li>
- <li> <a href="elektrina_priklady/10_EL.PRUD_V_PLYNOCH.pdf" target="blank"> Elektrický prúd v plynoch  </a> </li>
- <li> <a href="elektrina_priklady/11-12_EL.PRUD_V_POLOVODICOCH_A_DIODA.pdf" target="blank""> Elektrický prúd v polovodičoch a Polovodičová dióda </a> </li>
+<h1>Elektrina ⚡</h1>
+<h2>Kapitoly (PDF)</h2>
+
+<div class="chapters">
+<ol class="chapter-list">
+  <li><a href="elektrina_priklady/1_ELEKTRICKY_NABOJ.pdf" target="_blank">Elektrický náboj</a></li>
+  <li><a href="elektrina_priklady/2_ELEKTRICKY_PRUD.pdf" target="_blank">Elektrický prúd</a></li>
+  <li><a href="elektrina_priklady/3_MERANIE_ELEKTRICKEHO_PRUDU_V_OBVODE.pdf" target="_blank">Meranie elektrického prúdu v obvode</a></li>
+  <li><a href="elektrina_priklady/4-6_EL.NAPATIE,_EL._ODPOR,_OHMOV_ZAKON_PRE_CAST_ELEKTRICKEHO_OBVODU.pdf" target="_blank">Elektrické napätie, elektrický odpor a Ohmov zákon pre časť obvodu</a></li>
+  <li><a href="elektrina_priklady/7_OHMOV_ZAKON_PRE_UZAVRETY_ELEKTRICKY_OBVOD.pdf" target="_blank">Ohmov zákon pre uzavretý elektrický obvod</a></li>
+  <li><a href="elektrina_priklady/8_ZAHRIEVANIE_VODICA_ELEKTRICKYM_PRUDOM.pdf" target="_blank">Zahrievanie vodiča elektrickým prúdom</a></li>
+  <li><a href="elektrina_priklady/9_ELEKTRICKY_PRUD_V_KVAPALINACH.pdf" target="_blank">Elektrický prúd v kvapalinách</a></li>
+  <li><a href="elektrina_priklady/10_EL.PRUD_V_PLYNOCH.pdf" target="_blank">Elektrický prúd v plynoch</a></li>
+  <li><a href="elektrina_priklady/11-12_EL.PRUD_V_POLOVODICOCH_A_DIODA.pdf" target="_blank">Elektrický prúd v polovodičoch a polovodičová dióda</a></li>
 </ol>
+</div>
 
-<br><br>
-<a href="velke_word_dokumenty/elektrina_celkovo.docx"> Všetky kapitoly (Word) </a>
-
-<br><br>
-<img src="nic.gif" height="1" width="85%">
-<a href="https://www.skola.sk/s-prispevkom-zo-sr/146485-ucebnica-fyziky-pre-gymnazia-a-sos-elektrina.html" target="blank"> Objednajte si knihu </a>
-
-
+<div class="extra-links">
+  <a href="velke_word_dokumenty/elektrina_celkovo.docx" target="_blank">📘 Všetky kapitoly (Word)</a>
+  <a href="https://www.skola.sk/s-prispevkom-zo-sr/146485-ucebnica-fyziky-pre-gymnazia-a-sos-elektrina.html" target="_blank">📚 Objednajte si knihu</a>
+</div>
 
 </body>
 </html>
