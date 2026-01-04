@@ -20,34 +20,7 @@
     min-height: 100vh;
   }
 
-  table {
-    border-collapse: separate;
-    margin: 10px auto;
-    
-  }
 
- td {
-  padding: 0; /* padding presunieme do <a> */
-}
-
-td a {
-  
-  display: block;              /* odkaz sa správa ako blok */
-  width: 100%;                 /* zaberá celú šírku <td> */
-  height: 100%;                /* zaberá celú výšku <td> */
-  padding: 10px 15px;          /* pôvodný padding */
-  text-align: center;          /* stred textu */
-  background: rgba(60, 60, 80, 0.3);
-  border-radius: 10px;
-  color: #00e0d1;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background 0.3s, transform 0.2s;
-table {
-  border-collapse: separate; /* musí byť separate, aby spacovanie fungovalo */
-  border-spacing: 10px;      /* vzdialenosť medzi bunkami */
-  margin: 10px auto;
-}
 }
 
 td a:hover {
@@ -128,19 +101,53 @@ td a:hover {
       padding: 12px 15px;
     }
   }
+  .menu {
+  display: flex;
+  flex-wrap: wrap;        /* ⬅️ zabráni prekrývaniu */
+  justify-content: center;
+  gap: 10px;
+  padding: 15px;
+}
+
+.menu a {
+  padding: 10px 15px;
+  background: rgba(60, 60, 80, 0.3);
+  border-radius: 10px;
+  color: #00e0d1;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+  white-space: nowrap;
+}
+
+.menu a:hover {
+  background: rgba(120, 120, 160, 0.5);
+  color: #a77bff;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu a {
+    width: 90%;
+    text-align: center;
+  }
+}
 </style>
 </head>
 <body>
 
-<table align="center">
-  <tr>
-    <btn><a href="index.html">Hlavná stránka</a></btn>
-    <btn><a href="silaapohyb.html">Sila a Pohyb</a></btn>
-    <td><a href="periodickedeje.html">Periodické deje</a></td>
-    <td><a href="elektrina.html">Elektrina</a></td>
-    <td><a href="magnetizmus.html">Magnetizmus</a></td>
-  </tr>
-</table>
+<nav class="menu">
+  <a href="index.html">Hlavná stránka</a>
+  <a href="silaapohyb.html">Sila a Pohyb</a>
+  <a href="periodickedeje.html">Periodické deje</a>
+  <a href="elektrina.html">Elektrina</a>
+  <a href="magnetizmus.html">Magnetizmus</a>
+</nav>
 
 <h1>Vlastnosti kvapalín a plynov :)</h1>
 <h2>Kapitoly (PDF)</h2>
@@ -172,6 +179,7 @@ td a:hover {
 
 </body>
 </html>
+
 
 
 
