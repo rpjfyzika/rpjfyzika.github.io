@@ -5,105 +5,116 @@
 <title>Magnetizmus</title>
 <style>
   @keyframes bgPulse {
-    0% { background-position: 0% 0%; }
-    50% { background-position: 100% 100%; }
-    100% { background-position: 0% 0%; }
-  }
-
-  body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
- background: #e6b57a;
-background: linear-gradient(90deg,rgba(230, 181, 122, 1) 0%, rgba(209, 130, 10, 1) 100%);
-    animation: bgPulse 15s ease infinite;
-    color: #e0e0e0;
-    min-height: 100vh;
-  }
-
-
-
-
-td a:hover {
-  background: rgba(120, 120, 160, 0.5);
-  color: #a77bff;
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
 }
-  
 
-  h1, h2 {
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(
+    135deg,
+    #f2b36d,
+    #e38a1f,
+    #f2b36d
+  );
+  background-size: 300% 300%;
+  animation: bgPulse 15s ease infinite;
+  color: #f2f2f2;
+  min-height: 100vh;
+}
+
+/* ===== NAV ===== */
+td a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+/* ===== HEADINGS ===== */
+h1, h2 {
+  text-align: center;
+  color: #1a1a1a;
+}
+
+/* ===== CONTENT ===== */
+.chapters {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.chapter-list {
+  list-style: none;
+  padding: 0;
+}
+
+.chapter-list li {
+  background: rgba(20, 20, 20, 0.85);
+  margin: 10px 0;
+  border-radius: 12px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.chapter-list li:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 12px rgba(255, 180, 90, 0.6);
+}
+
+.chapter-list a {
+  display: block;
+  padding: 15px 20px;
+  color: #f5f5f5;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.chapter-list a:hover {
+  color: #ffcc8a;
+}
+
+/* ===== EXTRA LINKS ===== */
+.extra-links {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.extra-links a {
+  display: inline-block;
+  background: rgba(20, 20, 20, 0.85);
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 8px;
+  color: #f5f5f5;
+  transition: background 0.3s;
+}
+
+.extra-links a:hover {
+  background: rgba(40, 40, 40, 0.9);
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 600px) {
+  td {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  table {
+    width: 100%;
     text-align: center;
-    color: #d0d0ff;
-  }
-
-  .chapters {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 0 20px;
-  }
-
-  .chapter-list {
-    list-style: none;
-    padding: 0;
-  }
-
-  .chapter-list li {
-    background: rgba(40, 40, 60, 0.8);
-    margin: 10px 0;
-    border-radius: 12px;
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-
-  .chapter-list li:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 12px #00e0d1;
   }
 
   .chapter-list a {
-    display: block;
-    padding: 15px 20px;
-    color: #00e0d1;
-    text-decoration: none;
-    font-size: 1rem;
+    font-size: 0.95rem;
+    padding: 12px 15px;
   }
+}
 
-  .chapter-list a:hover {
-    color: #a77bff;
-  }
-
-  .extra-links {
-    text-align: center;
-    margin: 40px 0;
-  }
-
-  .extra-links a {
-    display: inline-block;
-    background: rgba(60, 60, 80, 0.8);
-    padding: 10px 20px;
-    margin: 10px;
-    border-radius: 8px;
-    transition: background 0.3s;
-  }
-
-  .extra-links a:hover {
-    background: rgba(120, 120, 160, 0.5);
-  }
-
-  @media (max-width: 600px) {
-    td {
-      display: block;
-      margin-bottom: 8px;
-    }
-    table {
-      width: 100%;
-      text-align: center;
-    }
-    .chapter-list a {
-      font-size: 0.95rem;
-      padding: 12px 15px;
-    }
-  }
-  .menu {
+/* ===== MENU ===== */
+.menu {
   display: flex;
-  flex-wrap: wrap;        /* ⬅️ zabráni prekrývaniu */
+  flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
   padding: 15px;
@@ -111,9 +122,9 @@ td a:hover {
 
 .menu a {
   padding: 10px 15px;
-  background: rgba(60, 60, 80, 0.3);
+  background: rgba(20, 20, 20, 0.75);
   border-radius: 10px;
-  color: #000000;
+  color: #f5f5f5;
   font-weight: 600;
   text-decoration: none;
   transition: background 0.3s, transform 0.2s;
@@ -121,8 +132,8 @@ td a:hover {
 }
 
 .menu a:hover {
-  background: rgba(120, 120, 160, 0.5);
-  color: #000000;
+  background: rgba(40, 40, 40, 0.9);
+  color: #ffcc8a;
   transform: translateY(-2px);
 }
 
@@ -137,6 +148,7 @@ td a:hover {
     text-align: center;
   }
 }
+
 </style>
 </head>
 <body>
@@ -175,6 +187,7 @@ td a:hover {
 
 </body>
 </html>
+
 
 
 
