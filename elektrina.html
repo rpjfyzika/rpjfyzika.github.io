@@ -5,105 +5,115 @@
 <title>Elektrina</title>
 <style>
   @keyframes bgPulse {
-    0% { background-position: 0% 0%; }
-    50% { background-position: 100% 100%; }
-    100% { background-position: 0% 0%; }
-  }
-
-  body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #1a1a1a, #2d2d2d, #1f1f2f, #2d2d2d);
-    background-size: 400% 400%;
-    animation: bgPulse 15s ease infinite;
-    color: #e0e0e0;
-    min-height: 100vh;
-  }
-
-
-
-
-td a:hover {
-  background: rgba(120, 120, 160, 0.5);
-  color: #a77bff;
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
 }
-  
 
-  h1, h2 {
-    text-align: center;
-    color: #d0d0ff;
-  }
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(
+    135deg,
+    #4d0000,
+    #990000,
+    #cc0000,
+    #990000
+  );
+  background-size: 400% 400%;
+  animation: bgPulse 15s ease infinite;
+  color: #f2f2f2;
+  min-height: 100vh;
+}
 
-  .chapters {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 0 20px;
-  }
+/* NAVIGATION HOVER */
+td a:hover {
+  background: rgba(180, 0, 0, 0.5);
+  color: #ff8080;
+}
 
-  .chapter-list {
-    list-style: none;
-    padding: 0;
-  }
+/* HEADINGS */
+h1, h2 {
+  text-align: center;
+  color: #ffcccc;
+}
 
-  .chapter-list li {
-    background: rgba(40, 40, 60, 0.8);
-    margin: 10px 0;
-    border-radius: 12px;
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
+/* CONTENT */
+.chapters {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
 
-  .chapter-list li:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 12px #00e0d1;
-  }
+.chapter-list {
+  list-style: none;
+  padding: 0;
+}
 
-  .chapter-list a {
+.chapter-list li {
+  background: rgba(30, 10, 10, 0.85);
+  margin: 10px 0;
+  border-radius: 12px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.chapter-list li:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 12px #ff4d4d;
+}
+
+.chapter-list a {
+  display: block;
+  padding: 15px 20px;
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.chapter-list a:hover {
+  color: #ff8080;
+}
+
+/* EXTRA LINKS */
+.extra-links {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.extra-links a {
+  display: inline-block;
+  background: rgba(30, 10, 10, 0.85);
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 8px;
+  color: #f2f2f2;
+  transition: background 0.3s;
+}
+
+.extra-links a:hover {
+  background: rgba(80, 0, 0, 0.7);
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  td {
     display: block;
-    padding: 15px 20px;
-    color: #00e0d1;
-    text-decoration: none;
-    font-size: 1rem;
+    margin-bottom: 8px;
   }
-
-  .chapter-list a:hover {
-    color: #a77bff;
-  }
-
-  .extra-links {
+  table {
+    width: 100%;
     text-align: center;
-    margin: 40px 0;
   }
+  .chapter-list a {
+    font-size: 0.95rem;
+    padding: 12px 15px;
+  }
+}
 
-  .extra-links a {
-    display: inline-block;
-    background: rgba(60, 60, 80, 0.8);
-    padding: 10px 20px;
-    margin: 10px;
-    border-radius: 8px;
-    transition: background 0.3s;
-  }
-
-  .extra-links a:hover {
-    background: rgba(120, 120, 160, 0.5);
-  }
-
-  @media (max-width: 600px) {
-    td {
-      display: block;
-      margin-bottom: 8px;
-    }
-    table {
-      width: 100%;
-      text-align: center;
-    }
-    .chapter-list a {
-      font-size: 0.95rem;
-      padding: 12px 15px;
-    }
-  }
-  .menu {
+/* MENU */
+.menu {
   display: flex;
-  flex-wrap: wrap;        /* ⬅️ zabráni prekrývaniu */
+  flex-wrap: wrap;        
   justify-content: center;
   gap: 10px;
   padding: 15px;
@@ -111,9 +121,9 @@ td a:hover {
 
 .menu a {
   padding: 10px 15px;
-  background: rgba(60, 60, 80, 0.3);
+  background: rgba(30, 10, 10, 0.75);
   border-radius: 10px;
-  color: #00e0d1;
+  color: #f2f2f2;
   font-weight: 600;
   text-decoration: none;
   transition: background 0.3s, transform 0.2s;
@@ -121,8 +131,8 @@ td a:hover {
 }
 
 .menu a:hover {
-  background: rgba(120, 120, 160, 0.5);
-  color: #a77bff;
+  background: rgba(180, 0, 0, 0.5);
+  color: #ff8080;
   transform: translateY(-2px);
 }
 
@@ -137,6 +147,7 @@ td a:hover {
     text-align: center;
   }
 }
+
 </style>
 </head>
 <body>
@@ -174,6 +185,7 @@ td a:hover {
 
 </body>
 </html>
+
 
 
 
