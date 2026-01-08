@@ -10,133 +10,133 @@
     100% { background-position: 0% 0%; }
   }
 
-  body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: #F4F1D8;
-    background-size: 400% 400%;
-    animation: bgPulse 15s ease infinite;
-    color: #e0e0e0;
-    min-height: 100vh;
-  }
+  /* ===== BACKGROUND – SOFT FUTURISTIC YELLOW (NO ANIMATION) ===== */
 
-
-
-
-td a:hover {
-  background: rgba(120, 120, 160, 0.5);
-  color: #a77bff;
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(
+    135deg,
+    #f4f1d8,
+    #eee8b9
+  );
+  color: #2a2d33;
+  min-height: 100vh;
 }
-  
 
-  h1, h2 {
+/* ===== NAV ===== */
+
+table {
+  border-collapse: collapse;
+  margin: 10px auto;
+}
+
+td {
+  border: none;
+  padding: 10px 15px;
+  background: rgba(22, 24, 29, 0.92);
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+td:hover {
+  background: rgba(32, 35, 42, 0.95);
+}
+
+a {
+  color: #f5f6fa;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  color: #c9b85c;
+}
+
+/* ===== HEADINGS ===== */
+
+h1, h2 {
+  text-align: center;
+  color: #1f222a;
+}
+
+/* ===== CONTENT ===== */
+
+.chapters {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.chapter-list {
+  list-style: none;
+  padding: 0;
+}
+
+.chapter-list li {
+  background: rgba(22, 24, 29, 0.95);
+  margin: 10px 0;
+  border-radius: 12px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.chapter-list li:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 14px rgba(201, 184, 92, 0.45);
+}
+
+.chapter-list a {
+  display: block;
+  padding: 15px 20px;
+  color: #f5f6fa;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.chapter-list a:hover {
+  color: #c9b85c;
+}
+
+/* ===== EXTRA LINKS ===== */
+
+.extra-links {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.extra-links a {
+  display: inline-block;
+  background: rgba(22, 24, 29, 0.95);
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 8px;
+  transition: background 0.3s;
+  color: #c9b85c;
+}
+
+.extra-links a:hover {
+  background: rgba(32, 35, 42, 0.95);
+}
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 600px) {
+  td {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  table {
+    width: 100%;
     text-align: center;
-    color: #d0d0ff;
-  }
-
-  .chapters {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 0 20px;
-  }
-
-  .chapter-list {
-    list-style: none;
-    padding: 0;
-  }
-
-  .chapter-list li {
-    background: rgba(40, 40, 60, 0.8);
-    margin: 10px 0;
-    border-radius: 12px;
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-
-  .chapter-list li:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 12px #00e0d1;
   }
 
   .chapter-list a {
-    display: block;
-    padding: 15px 20px;
-    color: #00e0d1;
-    text-decoration: none;
-    font-size: 1rem;
-  }
-
-  .chapter-list a:hover {
-    color: #a77bff;
-  }
-
-  .extra-links {
-    text-align: center;
-    margin: 40px 0;
-  }
-
-  .extra-links a {
-    display: inline-block;
-    background: rgba(60, 60, 80, 0.8);
-    padding: 10px 20px;
-    margin: 10px;
-    border-radius: 8px;
-    transition: background 0.3s;
-  }
-
-  .extra-links a:hover {
-    background: rgba(120, 120, 160, 0.5);
-  }
-
-  @media (max-width: 600px) {
-    td {
-      display: block;
-      margin-bottom: 8px;
-    }
-    table {
-      width: 100%;
-      text-align: center;
-    }
-    .chapter-list a {
-      font-size: 0.95rem;
-      padding: 12px 15px;
-    }
-  }
-  .menu {
-  display: flex;
-  flex-wrap: wrap;        /* ⬅️ zabráni prekrývaniu */
-  justify-content: center;
-  gap: 10px;
-  padding: 15px;
-}
-
-.menu a {
-  padding: 10px 15px;
-  background: rgba(60, 60, 80, 0.3);
-  border-radius: 10px;
-  color: #00e0d1;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background 0.3s, transform 0.2s;
-  white-space: nowrap;
-}
-
-.menu a:hover {
-  background: rgba(120, 120, 160, 0.5);
-  color: #a77bff;
-  transform: translateY(-2px);
-}
-
-@media (max-width: 600px) {
-  .menu {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .menu a {
-    width: 90%;
-    text-align: center;
+    font-size: 0.95rem;
+    padding: 12px 15px;
   }
 }
+
 </style>
 </head>
 <body>
@@ -150,6 +150,7 @@ td a:hover {
 </nav>
 
 <h1>Periodické deje 🔄</h1> <h2>Kapitoly (PDF)</h2> <div class="chapters"> <ol class="chapter-list"> <li><a href="periodickedeje_priklady/1_KMITAVY_POHYB.pdf" target="_blank">Kmitavý pohyb</a></li> <li><a href="periodickedeje_priklady/2_CASOVY_DIAGRAM_KMITAVEHO_POHYBU.pdf" target="_blank">Časový diagram kmitavého pohybu</a></li> <li><a href="periodickedeje_priklady/3_RYCHLOST_KMITAVEHO_POHYBU.pdf" target="_blank">Rýchlosť kmitavého pohybu</a></li> <li><a href="periodickedeje_priklady/4_DYNAMIKA_KMITAVEHO_POHYBU.pdf" target="_blank">Dynamika kmitavého pohybu</a></li> <li><a href="periodickedeje_priklady/5_PREMENY_ENERGIE_V_MECHANICKOM_OSCILATORE.pdf" target="_blank">Premeny energie v mechanickom oscilátore</a></li> <li><a href="periodickedeje_priklady/6_KYVADLO.pdf" target="_blank">Kyvadlo</a></li> <li><a href="periodickedeje_priklady/7_NUTENE_KMITANIE_OSCILATORA.pdf" target="_blank">Nútené kmitanie oscilátora</a></li> <li><a href="periodickedeje_priklady/8_MECHANICKE_VLNENIE.pdf" target="_blank">Mechanické vlnenie</a></li> <li><a href="periodickedeje_priklady/9_INTERFERENCIA_VLNENIA.pdf" target="_blank">Interferencia vlnenia</a></li> <li><a href="periodickedeje_priklady/10_STOJATE_MECHANICKE_VLNENIE.pdf" target="_blank">Stojaté mechanické vlnenie</a></li> <li><a href="periodickedeje_priklady/11_ZVUK_A_JEHO_VLASTNOSTI.pdf" target="_blank">Zvuk a jeho vlastnosti</a></li> <li><a href="periodickedeje_priklady/12_DOPPLEROV_JAV.docx.pdf" target="_blank">Dopplerov jav</a></li> </ol> </div> <div class="extra-links"> <a href="velke_word_dokumenty/periodickedeje_celkovo.docx" target="_blank">📘 Všetky kapitoly (Word)</a> <a href="https://www.skola.sk/s-prispevkom-zo-sr/146487-ucebnica-fyziky-pre-gymnazia-a-sos-periodicke-deje.html" target="_blank">📚 Objednajte si knihu</a> </div> </body> </html>
+
 
 
 
