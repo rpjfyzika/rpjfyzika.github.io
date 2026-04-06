@@ -3,142 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moje Fyzikálne Vzorce</title>
-    
-    <link rel="stylesheet" href="style.css">
+    <title>Témy - Fyzika</title>
+    <style>
+        body {
+            background-color: #fcfcfc;
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
 
+        h1 {
+            font-weight: 300;
+            letter-spacing: 2px;
+            color: #444;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+        }
 
+        .grid-temy {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 25px;
+            width: 100%;
+            max-width: 900px;
+        }
 
-<style >
-    
+        /* Odkaz roztiahnutý na celú plochu karty */
+        .tema-karta {
+            background: #ffffff;
+            border: 1px solid #eaeaea;
+            border-radius: 10px;
+            height: 120px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+            position: relative;
+            overflow: hidden;
+        }
 
+        .tema-karta:hover {
+            border-color: #3498db;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
 
-body {
+        /* Štýlovanie samotného odkazu vo vnútri karty */
+        .tema-karta a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            text-decoration: none; /* Odstráni podčiarknutie */
+            color: #555;
+            font-size: 1.1rem;
+            font-weight: 500;
+            text-align: center;
+            padding: 15px;
+            box-sizing: border-box;
+        }
 
-
-}
-
-.kontajner {
-
-
-  display: flex;
-    flex-wrap: wrap;           /* Aby sa to na mobile nezpučilo */
-    justify-content: space-between; /* Toto roztiahne stĺpce od okraja po okraj */
-    width: 100%;               /* Musí vedieť, že má brať celú šírku */
-    max-width: 1400px;         /* Voliteľné: aby to na obrovskom monitore nebolo až príliš ďaleko */
-    margin: 0 auto;            /* Vycentruje celú túto plochu na stred */
-    padding: 20px;
-    box-sizing: border-box;
-
-}
-
-
-.tema {
-
-display: flex;          /* Zapne flexbox pre celú sekciu */
-    flex-direction: column; /* Povie, že nadpis a karta majú byť pod sebou */
-    align-items: center;    /* TENTO RIADOK vycentruje nadpis aj kartu na stred */
-    margin-bottom: 30px;
-
-}
-
-.karticka {
-    background: red;
-    border-radius: 15px;
-    
-    /* RESPONZÍVNA ŠÍRKA */
-    width: 90%;          /* Na malom displeji sa zúži */
-    max-width: 220px;    /* Na veľkom displeji nebude obrovská */
-    
-    /* PRUŽNÁ VÝŠKA */
-    min-height: 120px;   /* Základná výška */
-    height: auto;        /* Ak bude dlhá rovnica, karta sa zväčší */
-    
-    padding: 15px;       /* Vnútorný odstup, aby text nebol na okraji */
-    box-sizing: border-box; /* Dôležité: padding nezväčší kartu navonok */
-
-    /* DOKONALÝ STRED */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Stred zhora nadol */
-    align-items: center;     /* Stred zľava doprava - TOTO TI CHÝBA */
-    text-align: center;      /* Zarovnanie textu na stred */
-
-margin-bottom: 2rem;
-}
-
-</style>
-
-
+        /* Farebný detail navrchu */
+        .tema-karta::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 3px;
+            background: #3498db;
+            border-radius: 0 0 5px 5px;
+        }
+    </style>
 </head>
-
-
-
-
-
 <body>
 
+    <h1>Fyzikálne Okruhy</h1>
 
-<main class="kontajner">
-    
-    <section class="tema">
-        <h2>Mechanika</h3>
-        <article class="karticka">
-            <h3>rýchlosť</h3>
-            <p>v = s / t</p>
+    <div class="grid-temy">
 
+        <div class="tema-karta">
+            <a href="vzorcove_stranky/sila_pohyb.html">Mechanika</a>
+        </div>
 
-        </article>
+        <div class="tema-karta">
+            <a href="vzorcove_stranky/termodynamika.html">Termodynamika</a>
+        </div>
 
+        <div class="tema-karta">
+            <a href="vzorcove_stranky/elektrina.html">Elektrina a magnetizmus</a>
+        </div>
 
-        <article class="karticka">
-            <h3>Hustota</h3>
-            <p>ρ = m / V</p>
+        <div class="tema-karta">
+            <a href="vzorcove_stranky/optika.html">Optika</a>
+        </div>
 
+        <div class="tema-karta">
+            <a href="vzorcove_stranky/kvapaliny.html">Vlastnosti kvapalín</a>
+        </div>
 
-        </article>
+        <div class="tema-karta" style="border-style: dashed;">
+            <a href="#" style="color: #bbb;">+ Pridať tému</a>
+        </div>
 
-
-    </section>
-
-    <section>
-        <h3>Termodynamika</h3>
-        <article>
-            
-
-
-        </article>
-
-
-    </section>
-
-
-    <section>
-         <h3>Elektrina</h3>
-        <article class="karticka">
-            <h3>Ohmov zákon</h3>
-            <p>R = U / I</p>
-
-
-        </article>
-
-
-    </section>
-
-
-
-    <section>
-        <h3>Hydrodynamika</h3>
-        <article>
-            
-
-
-        </article>
-
-
-    </section>
-</main>
-
+    </div>
 
 </body>
 </html>
