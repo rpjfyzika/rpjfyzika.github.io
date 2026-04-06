@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kvapaliny a Plyny - Vzorce</title>
+    <style>
+        body {
+            background-color: #f4f7f6;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .spat-odkaz {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #1abc9c; /* Iná farba pre túto tému */
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .grid-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .karta {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            width: 280px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border: 1px solid #ddd;
+            transition: transform 0.2s;
+        }
+
+        .karta:hover {
+            transform: scale(1.02);
+        }
+
+        .karta h2 {
+            font-size: 1.1rem;
+            margin-top: 0;
+            color: #16a085;
+            display: flex;
+            align-items: center;
+        }
+
+        .karta h2::before {
+            content: "💧"; /* Malá ikona kvapky */
+            margin-right: 8px;
+        }
+
+        .vzorec {
+            background-color: #e8f8f5;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin: 15px 0;
+            color: #2c3e50;
+            border-left: 4px solid #1abc9c;
+        }
+
+        .popis {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: #666;
+        }
+
+        b {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="spat-odkaz">← Späť na témy</a>
+
+    <header>
+        <h1>Kvapaliny a Plyny</h1>
+        <p>Tlak, hustota a hydrostatika</p>
+    </header>
+
+    <div class="grid-container">
+
+        <div class="karta">
+            <h2>Hustota</h2>
+            <div class="vzorec">ρ = m / V</div>
+            <div class="popis">
+                <b>ρ</b> – hustota [kg/m³]<br>
+                <b>m</b> – hmotnosť [kg]<br>
+                <b>V</b> – objem [m³]
+            </div>
+        </div>
+
+       
+
+        <div class="karta">
+            <h2>Hydrostatický tlak</h2>
+            <div class="vzorec">p<sub>h</sub> = h · ρ · g</div>
+            <div class="popis">
+                <b>h</b> – hĺbka pod hladinou [m]<br>
+                <b>ρ</b> – hustota kvapaliny [kg/m³]<br>
+                <b>g</b> – tiažové zrýchlenie [10 N/kg]
+            </div>
+        </div>
+
+        <div class="karta">
+            <h2>Archimedov zákon</h2>
+            <div class="vzorec">F<sub>vz</sub> = V<sub>p</sub> · ρ<sub>k</sub> · g</div>
+            <div class="popis">
+                <b>F<sub>vz</sub></b> – vztlaková sila [N]<br>
+                <b>V<sub>p</sub></b> – objem ponorenej časti [m³]<br>
+                <b>ρ<sub>k</sub></b> – hustota kvapaliny [kg/m³]
+            </div>
+        </div>
+
+        <div class="karta">
+            <h2>Pascalov zákon</h2>
+            <div class="vzorec">F<sub>1</sub>/S<sub>1</sub> = F<sub>2</sub>/S<sub>2</sub></div>
+            <div class="popis">
+                Tlak vyvolaný vonkajšou silou je v kvapaline všade rovnaký.
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
