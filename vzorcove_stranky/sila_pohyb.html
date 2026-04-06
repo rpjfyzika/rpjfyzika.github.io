@@ -1,1 +1,138 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <title>Môj Fyzikálny Zápisník</title>
+    <style>
+        body {
+            background-color: #f4f7f6; /* Jemná sivo-zelená */
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
 
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        /* Kontajner, ktorý karty pekne zarovná */
+        .grid-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px; /* Medzery medzi kartami */
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* Dizajn karty */
+        .karta {
+            background: white;
+            border-radius: 15px; /* Pekné oblé rohy */
+            padding: 20px;
+            width: 260px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Veľmi jemný tieň */
+            border: 1px solid #ddd;
+        }
+
+        /* Nadpis v karte s farebným bodom */
+        .karta h2 {
+            font-size: 1.2rem;
+            margin-top: 0;
+            color: #2980b9;
+            display: flex;
+            align-items: center;
+        }
+
+        .karta h2::before {
+            content: "•";
+            color: #e74c3c;
+            margin-right: 8px;
+            font-size: 1.5rem;
+        }
+
+        /* Samotný vzorec */
+        .vzorec {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin: 15px 0;
+            color: #2c3e50;
+            border-left: 4px solid #3498db;
+        }
+
+        /* Popis veličín */
+        .popis {
+            font-size: 0.9rem;
+            line-height: 1.4;
+            color: #666;
+        }
+
+        b {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Fyzikálne Vzorce</h1>
+        <p>Moja zbierka dôležitých vzťahov</p>
+    </header>
+
+    <div class="grid-container">
+
+        <div class="karta">
+            <h2>Rýchlosť rovnomerného pohybu</h2>
+            <div class="vzorec">v = s / t</div>
+            <div class="popis">
+                <b>v</b> – rýchlosť [m/s]<br>
+                <b>s</b> – dráha [m]<br>
+                <b>t</b> – čas [s]
+            </div>
+        </div>
+
+        <div class="karta">
+            <h2>Dráha pri rovnomernom pohybe</h2>
+            <div class="vzorec">s = v * t </div>
+            <div class="popis">
+                <b>v</b> – rýchlosť [m/s]<br>
+                <b>s</b> – dráha [m]<br>
+                <b>t</b> – čas [s]
+            </div>
+        </div>
+
+        <div class="karta">
+            <h2>Tlak</h2>
+            <div class="vzorec">a = v / t</div>
+            <div class="popis">
+                <b>v</b> – zmena rýchlosť [m/s]<br>
+                <b>a</b> – zrýchlenie <br>
+                <b>t</b> – čas [s]
+            </div>
+        </div>
+
+        <div class="karta" style="border-style: dashed;">
+            <h2 style="color: #95a5a6;">Nový vzorec denko dopise</h2>
+            <div class="vzorec" style="color: #bdc3c7;">sdgdfg</div>
+            <div class="popis">
+                blablabla
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
