@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elektrina - Ťahák</title>
+    <style>
+        body {
+            background-color: #fdfdfd;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .spat {
+            text-decoration: none;
+            color: #f1c40f;
+            font-weight: bold;
+            border: 1px solid #f1c40f;
+            padding: 5px 15px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .spat:hover {
+            background: #f1c40f;
+            color: white;
+        }
+
+        h1 {
+            color: #2c3e50;
+            border-bottom: 4px solid #f1c40f; /* Žltá ako elektrina */
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .karta {
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .karta h2 {
+            margin: 0 0 10px 0;
+            font-size: 1rem;
+            color: #7f8c8d;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .vzorec {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #2c3e50;
+            background: #fff9e6;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .popis {
+            font-size: 0.85rem;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        /* Zvýraznenie konštánt */
+        .konstanta {
+            background: #34495e;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="https://rpjfyzika.github.io/" class="spat">← Späť</a>
+
+    <header>
+        <h1>Elektrický prúd a pole</h1>
+    </header>
+
+    <div style="max-width: 1200px; margin: 0 auto;">
+        <div class="konstanta">
+            <strong>Elementárny náboj:</strong> e = 1,602 · 10<sup>-19</sup> C
+        </div>
+    </div>
+
+    <div class="grid">
+
+        <div class="karta">
+            <h2>Veľkosť náboja</h2>
+            <div class="vzorec">Q = N · e</div>
+            <div class="popis">N - počet častíc, e - elementárny náboj</div>
+        </div>
+
+        <div class="karta">
+            <h2>Elektrická sila</h2>
+            <div class="vzorec">F<sub>e</sub> = (1 / 4πε) · (Q<sub>1</sub>Q<sub>2</sub> / r<sup>2</sup>)</div>
+            <div class="popis">Coulombov zákon - sila medzi dvoma nábojmi.</div>
+        </div>
+
+        <div class="karta">
+            <h2>Elektrický prúd</h2>
+            <div class="vzorec">I = Q / t = (N · e) / t</div>
+            <div class="popis">Množstvo náboja, ktoré pretečie za čas <i>t</i>.</div>
+        </div>
+
+        <div class="karta">
+            <h2>Elektrické napätie</h2>
+            <div class="vzorec">U = W / Q</div>
+            <div class="popis">Práca vykonaná pri prenose náboja.</div>
+        </div>
+
+        <div class="karta">
+            <h2>Ohmov zákon</h2>
+            <div class="vzorec">R = U / I</div>
+            <div class="popis">U - napätie [V], I - prúd [A], R - odpor [Ω].</div>
+        </div>
+
+        <div class="karta">
+            <h2>Odpor vodiča</h2>
+            <div class="vzorec">R = ρ · (l / S)</div>
+            <div class="popis">ρ - merný odpor, l - dĺžka, S - prierez vodiča.</div>
+        </div>
+
+        <div class="karta">
+            <h2>Odpor od teploty</h2>
+            <div class="vzorec">R = R<sub>0</sub>(1 + αΔt)</div>
+            <div class="popis">Zmena odporu vodiča pri zmene teploty.</div>
+        </div>
+
+        <div class="karta">
+            <h2>Ohmov zákon pre uzavretý obvod</h2>
+            <div class="vzorec">I = U<sub>e</sub> / (R + R<sub>i</sub>)</div>
+            <div class="popis">U<sub>e</sub> - elektromotorické napätie, R<sub>i</sub> - vnútorný odpor.</div>
+        </div>
+
+        <div class="karta">
+            <h2>Výkon el. prúdu</h2>
+            <div class="vzorec">P = W / t = U · I = R · I<sup>2</sup></div>
+            <div class="popis">Výkon sa udáva vo Wattoch [W].</div>
+        </div>
+
+        <div class="karta">
+            <h2>Účinnosť v obvode</h2>
+            <div class="vzorec">η = R / (R + R<sub>i</sub>)</div>
+            <div class="popis">Pomer užitočného odporu k celkovému.</div>
+        </div>
+
+    </div>
+
+</body>
+</html>
