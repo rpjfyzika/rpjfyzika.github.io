@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magnetizmus a Striedavý prúd</title>
+    <style>
+        body {
+            background-color: #f4f7f6;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .spat {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #8e44ad;
+            font-weight: bold;
+            border: 1px solid #8e44ad;
+            padding: 5px 15px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .spat:hover {
+            background: #8e44ad;
+            color: white;
+        }
+
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #8e44ad;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .grid-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .karta {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border: 1px solid #ddd;
+        }
+
+        .karta h2 {
+            font-size: 1rem;
+            margin-top: 0;
+            color: #8e44ad;
+            display: flex;
+            align-items: center;
+            text-transform: uppercase;
+        }
+
+        .karta h2::before {
+            content: "🧲";
+            margin-right: 8px;
+        }
+
+        .vzorec {
+            background-color: #f4eef8;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 15px 0;
+            color: #2c3e50;
+            border-left: 4px solid #8e44ad;
+        }
+
+        .popis {
+            font-size: 0.85rem;
+            line-height: 1.4;
+            color: #666;
+        }
+
+        b {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="https://rpjfyzika.github.io/" class="spat">← Späť na témy</a>
+
+    <header>
+        <h1>Magnetizmus a Striedavý prúd</h1>
+        <p>Indukcia, transformátory a striedavé napätie</p>
+    </header>
+
+    <div class="grid-container">
+
+        <div class="karta">
+            <h2>Magnetická sila</h2>
+            <div class="vzorec">F<sub>m</sub> = B · I · l · sin α</div>
+            <div class="popis">
+                <b>B</b> – indukcia [T], <b>I</b> – prúd [A]<br>
+                <b>l</b> – dĺžka vodiča [m]
+            </div>
+        </div>
+
+        <div class="karta">
+            <h2>Magnetická indukcia</h2>
+            <div class="vzorec">B = F<sub>m</sub> / (I · l)</div>
+            <div class="popis">Charakterizuje magnetické pole v danom bode.</div>
+        </div>
+
+        <div class="karta">
+            <h2>Pôsobenie vodičov</h2>
+            <div class="vzorec">F<sub>m</sub> = μ<sub>0</sub>μ<sub>r</sub> · (I<sub>1</sub>I<sub>2</sub> / 2πd) · l</div>
+            <div class="popis">Sila medzi dvoma paralelnými vodičmi.</div>
+        </div>
+
+        <div class="karta">
+            <h2>Sila na náboj</h2>
+            <div class="vzorec">F<sub>m</sub> = B · Q · v</div>
+            <div class="popis">Sila pôsobiaca na časticu s nábojom <b>Q</b> letiacu rýchlosťou <b>v</b>.</div>
+        </div>
+
+        <div class="karta">
+            <h2>Magnetický indukčný tok</h2>
+            <div class="vzorec">Φ = B · S · cos α</div>
+            <div class="popis">Množstvo magnetizmu prechádzajúce plochou <b>S</b>.</div>
+        </div>
+
+        <div class="karta">
+            <h2>Indukované napätie</h2>
+            <div class="vzorec">U<sub>i</sub> = - ΔΦ / Δt</div>
+            <div class="popis">Faradayov zákon elektromagnetickej indukcie.</div>
+        </div>
+
+        <div class="karta">
+            <h2>Uhlová frekvencia</h2>
+            <div class="vzorec">ω = 2π / T = 2πf</div>
+            <div class="popis"><b>T</b> – perióda [s], <b>f</b> – frekvencia [Hz].</div>
+        </div>
+
+        <div class="karta">
+            <h2>Efektívna hodnota prúdu</h2>
+            <div class="vzorec">I = I<sub>m</sub> / √2 ≈ 0,707 · I<sub>m</sub></div>
+            <div class="popis"><b>I<sub>m</sub></b> – maximálna hodnota prúdu.</div>
+        </div>
+
+        <div class="karta">
+            <h2>Rovnica transformátora</h2>
+            <div class="vzorec">U<sub>2</sub> / U<sub>1</sub> = N<sub>2</sub> / N<sub>1</sub> = k</div>
+            <div class="popis"><b>N</b> – počet závitov, <b>k</b> – transformačný pomer.</div>
+        </div>
+
+        <div class="karta">
+            <h2>Účinník</h2>
+            <div class="vzorec">cos φ = P / (U · I)</div>
+            <div class="popis">Vyjadruje fázový posun medzi prúdom a napätím.</div>
+        </div>
+
+    </div>
+
+</body>
+</html>
