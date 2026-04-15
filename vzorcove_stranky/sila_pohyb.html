@@ -2,10 +2,11 @@
 <html lang="sk">
 <head>
     <meta charset="UTF-8">
-    <title>PREHLAD VZORCOV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mechanika - Vzorce</title>
     <style>
         body {
-            background-color: #f4f7f6; /* Jemná sivo-zelená */
+            background-color: #f4f7f9;
             font-family: 'Segoe UI', Arial, sans-serif;
             margin: 0;
             padding: 20px;
@@ -17,65 +18,76 @@
             margin-bottom: 40px;
         }
 
+        .spat {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #2980b9;
+            font-weight: bold;
+            border: 1px solid #2980b9;
+            padding: 5px 15px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .spat:hover {
+            background: #2980b9;
+            color: white;
+        }
+
         h1 {
             color: #2c3e50;
-            border-bottom: 3px solid #3498db;
+            border-bottom: 3px solid #2980b9;
             display: inline-block;
             padding-bottom: 5px;
         }
 
-        /* Kontajner, ktorý karty pekne zarovná */
         .grid-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 20px; /* Medzery medzi kartami */
-            max-width: 1000px;
+            gap: 20px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
-        /* Dizajn karty */
         .karta {
             background: white;
-            border-radius: 15px; /* Pekné oblé rohy */
+            border-radius: 15px;
             padding: 20px;
-            width: 260px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Veľmi jemný tieň */
+            width: 300px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
             border: 1px solid #ddd;
         }
 
-        /* Nadpis v karte s farebným bodom */
         .karta h2 {
-            font-size: 1.2rem;
+            font-size: 0.95rem;
             margin-top: 0;
             color: #2980b9;
             display: flex;
             align-items: center;
+            text-transform: uppercase;
         }
 
         .karta h2::before {
-            content: "•";
-            color: #e74c3c;
+            content: "⚙️";
             margin-right: 8px;
-            font-size: 1.5rem;
         }
 
-        /* Samotný vzorec */
         .vzorec {
-            background-color: #f8f9fa;
+            background-color: #ebf5fb;
             border-radius: 8px;
             padding: 15px;
             text-align: center;
-            font-size: 1.4rem;
+            font-size: 1.25rem;
             font-weight: bold;
             margin: 15px 0;
             color: #2c3e50;
-            border-left: 4px solid #3498db;
+            border-left: 4px solid #2980b9;
         }
 
-        /* Popis veličín */
         .popis {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             line-height: 1.4;
             color: #666;
         }
@@ -87,51 +99,67 @@
 </head>
 <body>
 
-     <a href="../index.html" class="spat-odkaz">← Späť na témy</a>
-    
+    <a href="index.html" class="spat">← Späť na témy</a>
+
     <header>
-        <h1>Fyzikálne Vzorce</h1>
-       
+        <h1>Sila a Pohyb</h1>
+        <p>Kinematika, dynamika a mechanická energia</p>
     </header>
 
     <div class="grid-container">
 
         <div class="karta">
-            <h2>Rýchlosť rovnomerného pohybu</h2>
-            <div class="vzorec">v = s / t</div>
-            <div class="popis">
-                <b>v</b> – rýchlosť [m/s]<br>
-                <b>s</b> – dráha [m]<br>
-                <b>t</b> – čas [s]
-            </div>
+            <h2>Rovnomerný pohyb</h2>
+            <div class="vzorec">s = v · t</div>
+            <div class="popis"><b>v</b> = konšt. (rýchlosť sa nemení)</div>
         </div>
 
         <div class="karta">
-            <h2>Dráha pri rovnomernom pohybe</h2>
-            <div class="vzorec">s = v * t </div>
-            <div class="popis">
-                <b>v</b> – rýchlosť [m/s]<br>
-                <b>s</b> – dráha [m]<br>
-                <b>t</b> – čas [s]
-            </div>
+            <h2>Rovnomerne zrýchlený</h2>
+            <div class="vzorec">s = ½ a · t<sup>2</sup></div>
+            <div class="popis"><b>v = a · t</b>, zrýchlenie <b>a</b> je konštantné.</div>
         </div>
 
         <div class="karta">
-            <h2>Tlak</h2>
-            <div class="vzorec">a = v / t</div>
-            <div class="popis">
-                <b>v</b> – zmena rýchlosť [m/s]<br>
-                <b>a</b> – zrýchlenie <br>
-                <b>t</b> – čas [s]
-            </div>
+            <h2>Trecia sila</h2>
+            <div class="vzorec">F<sub>t</sub> = f · F<sub>G</sub> · cos α</div>
+            <div class="popis"><b>f</b> – súčiniteľ trenia, <b>α</b> – sklon roviny.</div>
         </div>
 
-        <div class="karta" style="border-style: dashed;">
-            <h2 style="color: #95a5a6;">Nový vzorec denko dopise</h2>
-            <div class="vzorec" style="color: #bdc3c7;">sdgdfg</div>
-            <div class="popis">
-                blablabla
-            </div>
+        <div class="karta">
+            <h2>Odporová sila</h2>
+            <div class="vzorec">F<sub>o</sub> = ½ C · ρ · S · v<sup>2</sup></div>
+            <div class="popis">Odpor vzduchu/tekutiny pri pohybe telesa.</div>
+        </div>
+
+        <div class="karta">
+            <h2>2. Newtonov zákon</h2>
+            <div class="vzorec">F = Δp / Δt = m · a</div>
+            <div class="popis">Sila je zmena hybnosti za čas.</div>
+        </div>
+
+        <div class="karta">
+            <h2>Dostredivá sila</h2>
+            <div class="vzorec">F<sub>d</sub> = m · v<sup>2</sup> / r</div>
+            <div class="popis">Udržuje teleso na kruhovej dráhe s polomerom <b>r</b>.</div>
+        </div>
+
+        <div class="karta">
+            <h2>Moment sily</h2>
+            <div class="vzorec">M = F · r</div>
+            <div class="popis">Otáčavý účinok sily na ramene <b>r</b>.</div>
+        </div>
+
+        <div class="karta">
+            <h2>Kinetická energia</h2>
+            <div class="vzorec">E<sub>k</sub> = ½ m · v<sup>2</sup></div>
+            <div class="popis">Energia pohybujúceho sa telesa.</div>
+        </div>
+
+        <div class="karta">
+            <h2>Potenciálna energia</h2>
+            <div class="vzorec">E<sub>p</sub> = m · g · h</div>
+            <div class="popis">Energia telesa vo výške <b>h</b> nad zemou.</div>
         </div>
 
     </div>
