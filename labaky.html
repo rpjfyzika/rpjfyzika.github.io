@@ -1,1 +1,173 @@
 
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elektromagnetické žiarenie</title>
+<style>
+  @keyframes bgPulse {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #8D308C, #DE1FF0);
+  color: #8D308C;
+  min-height: 100vh;
+}
+
+
+/* NAVIGATION HOVER */
+td a:hover {
+  background: rgba(180, 0, 0, 0.5);
+  color: #4dff00;
+}
+
+/* HEADINGS */
+h1, h2 {
+  text-align: center;
+  color: #EC53F5;
+}
+
+/* CONTENT */
+.chapters {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.chapter-list {
+  list-style: none;
+  padding: 0;
+}
+
+.chapter-list li {
+  background: rgba(30, 10, 10, 0.85);
+  margin: 10px 0;
+  border-radius: 12px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.chapter-list li:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 12px #F01FD4;
+}
+
+.chapter-list a {
+  display: block;
+  padding: 15px 20px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.chapter-list a:hover {
+  color: #ff00aa;
+}
+
+/* EXTRA LINKS */
+.extra-links {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.extra-links a {
+  display: inline-block;
+  background: rgba(30, 10, 10, 0.85);
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 8px;
+  color: #FF00AA;
+  transition: background 0.3s;
+}
+
+.extra-links a:hover {
+  background: rgba(80, 20, 80, 0.7);
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  td {
+    display: block;
+    margin-bottom: 8px;
+  }
+  table {
+    width: 100%;
+    text-align: center;
+  }
+  .chapter-list a {
+    font-size: 1rem;
+    padding: 12px 15px;
+  }
+}
+
+/* MENU */
+.menu {
+  display: flex;
+  flex-wrap: wrap;        
+  justify-content: center;
+  gap: 10px;
+  padding: 15px;
+}
+
+.menu a {
+  padding: 10px 15px;
+  background: rgba(30, 10, 10, 0.75);
+  border-radius: 10px;
+  color: #f2f2f2;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+  white-space: nowrap;
+}
+
+.menu a:hover {
+  background: rgba(	30, 10, 10, 0.75);
+  color: #FF00AA;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu a {
+    width: 90%;
+    text-align: center;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<nav class="menu">
+  <a href="index.html">Hlavná stránka</a>
+  <a href="elektrina.html">Elektrina</a>
+  <a href="silaapohyb.html">Sila a Pohyb</a>
+  <a href="periodickedeje.html">Periodické deje</a>
+  <a href="vlastnostikap.html">Vlastnosti kvapalín a plynov</a>
+  <a href="magnetizmus.html">Magnetizmus</a>
+  <a href="Minimum_nove.pdf">Minimum</a>
+  <a href="elektromagnetickeziarenie.html">Elektromagnetické žiarenie</a>
+</nav>
+
+
+<h1>Laboratórne cvičenia</h1>
+<h2>Kapitoly (Word)</h2>
+
+<div class="chapters">
+<ol class="chapter-list">
+  <li><a href="Fyzika-webstránka/emziarenie/1 ELEKTROMAGNETICKÉ ŽIARENIE.pdf" target="_blank">Elektromagnetické žiarenie</a></li>
+</ol>
+</div>
+
+
+
+</body>
+</html>
