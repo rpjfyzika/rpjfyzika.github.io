@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kmitanie a Vlnenie</title>
+    <style>
+        body {
+            background-color: #fefefe;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .spat {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #e67e22;
+            font-weight: bold;
+            border: 1px solid #e67e22;
+            padding: 5px 15px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .spat:hover {
+            background: #e67e22;
+            color: white;
+        }
+
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #e67e22;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .grid-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .karta {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            width: 320px; /* O niečo širšie kvôli dlhším vzorcom */
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border: 1px solid #ddd;
+        }
+
+        .karta h2 {
+            font-size: 0.95rem;
+            margin-top: 0;
+            color: #d35400;
+            display: flex;
+            align-items: center;
+            text-transform: uppercase;
+            min-height: 40px;
+        }
+
+        .karta h2::before {
+            content: "〰️";
+            margin-right: 8px;
+        }
+
+        .vzorec {
+            background-color: #fff5e6;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin: 15px 0;
+            color: #2c3e50;
+            border-left: 4px solid #e67e22;
+        }
+
+        .popis {
+            font-size: 0.85rem;
+            line-height: 1.4;
+            color: #666;
+        }
+
+        b {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="spat">← Späť na témy</a>
+
+    <header>
+        <h1>Periodicke deje</h1>
+        <p>Harmonický pohyb, oscilátory a akustika</p>
+    </header>
+
+    <div class="grid-container">
+
+        <div class="karta">
+            <h2>Frekvencia a perióda</h2>
+            <div class="vzorec">f = 1 / T</div>
+            <div class="popis">
+                <b>f</b> – frekvencia [Hz]<br>
+                <b>T</b> – perióda (čas jedného kmitu) [s]
+            </div>
+        </div>
+
+        <div class="karta">
+            <h2>Okamžitá výchylka</h2>
+            <div class="vzorec">y = y<sub>m</sub> · sin(ωt)</div>
+            <div class="popis">
+                <b>y<sub>m</sub></b> – amplitúda výchylky<br>
+                <b>ω</b> – uhlová frekvencia
+            </div>
+        </div>
+
+        <div class="karta">
+            <h2>Tuhosť pružiny</h2>
+            <div class="vzorec">k = F<sub>G</sub> / Δl</div>
+            <div class="popis">
+                <b>F<sub>G</sub></b> – tiažová sila telesa<br>
+                <b>Δl</b> – predĺženie pružiny
+            </div>
+        </div>
+
+        <div class="karta">
+            <h2>Perióda oscilátora</h2>
+            <div class="vzorec">T<sub>0</sub> = 2π · √(m / k)</div>
+            <div class="popis">
+                <b>m</b> – hmotnosť telesa<br>
+                <b>k</b> – tuhosť pružiny
+            </div>
+        </div>
+
+        <div class="karta">
+            <h2>Perióda kyvadla</h2>
+            <div class="vzorec">T<sub>0</sub> = 2π · √(l / g)</div>
+            <div class="popis">
+                <b>l</b> – dĺžka kyvadla<br>
+                <b>g</b> – tiažové zrýchlenie
+            </div>
+        </div>
+
+        <div class="karta">
+            <h2>Vlnová dĺžka</h2>
+            <div class="vzorec">λ = v · T</div>
+            <div class="popis">
+                <b>λ</b> – vlnová dĺžka [m]<br>
+                <b>v</b> – rýchlosť šírenia vlnenia
+            </div>
+        </div>
+
+        <div class="karta">
+            <h2>Rýchlosť zvuku</h2>
+            <div class="vzorec">v ≈ 340 m·s⁻¹</div>
+            <div class="popis">
+                Informatívna hodnota rýchlosti zvuku vo vzduchu pri teplote cca 20 °C.
+            </div>
+        </div>
+
+        <div class="karta">
+            <h2>Dopplerov jav</h2>
+            <div class="vzorec">f<sub>p</sub> = f<sub>z</sub> · (v<sub>zvu</sub> / (v<sub>zvu</sub> ± v<sub>zdr</sub>))</div>
+            <div class="popis">
+                Zmena frekvencie pri pohybe zdroja alebo pozorovateľa.
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
